@@ -1,39 +1,57 @@
 const services = [
   {
     icon: "⚙️",
-    title: "Workflow Automation",
+    title: "Workflow & Process Automation",
     description:
-      "End-to-end process automation using n8n, Make, or Power Automate. From simple integrations to complex multi-step workflows with conditional logic and error handling.",
+      "End-to-end automation using n8n, Make, Power Automate, or Zapier. From simple tool integrations to complex multi-step workflows with conditional logic, error handling, and full documentation.",
   },
   {
     icon: "🤖",
     title: "AI Agent Development",
     description:
-      "Multi-agent systems, LLM-powered pipelines, and autonomous task execution built on OpenAI and Claude , designed to operate reliably in production.",
+      "Multi-agent systems, LLM-powered pipelines, and autonomous task execution built on OpenAI, Claude, and LangChain. Designed to operate reliably in production, not just in demos.",
   },
   {
     icon: "🎙️",
     title: "Voice AI Systems",
     description:
-      "AI phone agents for inbound and outbound use cases. Booking, qualification, triage, and support , running 24/7 without staffing cost.",
+      "AI phone agents for inbound and outbound use cases built on Vapi and Twilio. Lead qualification, appointment booking, triage, and customer support running 24/7 without staffing cost.",
   },
   {
-    icon: "🔗",
-    title: "RPA + AI Integrations",
+    icon: "🔄",
+    title: "RPA & Document Processing",
     description:
-      "UiPath-powered robotic process automation layered with AI decision agents and human-in-the-loop review steps for complex document and approval workflows.",
+      "UiPath and Power Automate Desktop for robotic process automation. Invoice processing, document extraction, approval workflows, and human-in-the-loop review for regulated industries.",
+  },
+  {
+    icon: "📊",
+    title: "CRM Implementation & Integration",
+    description:
+      "Full CRM setup, customization, migration, and automation across HubSpot, Pipedrive, GoHighLevel, and Zoho. Clean data, connected systems, and workflows that actually reflect how your team works.",
   },
   {
     icon: "💬",
-    title: "Conversational AI",
+    title: "Conversational AI & Chatbots",
     description:
-      "WhatsApp, SMS, and chat agents that qualify leads, answer questions, and take action inside your CRM , built on Twilio, GreenAPI, and Botpress.",
+      "WhatsApp, SMS, and web chat agents built on Botpress, ManyChat, and custom n8n flows. Lead qualification, FAQ handling, RSVP management, and two-way conversations at scale.",
   },
   {
-    icon: "🏗️",
-    title: "Embedded Contract Work",
+    icon: "🛠️",
+    title: "Internal Tools & Dashboards",
     description:
-      "Available for embedded roles within agencies and internal teams. Experienced working under NDA, delivering to client specs as a reliable extension of your team.",
+      "Custom internal tools, client portals, and operational dashboards built on Next.js, Retool, Supabase, and Softr. Systems your team can actually use and own long term.",
+  },
+  {
+    icon: "📋",
+    title: "SOPs & Systems Documentation",
+    description:
+      "Clear, structured SOPs and process documentation for automation systems and operational workflows. Every build I deliver comes with documentation your team can follow without needing me present.",
+  },
+  {
+    icon: "🔗",
+    title: "Embedded Contract & Agency Work",
+    description:
+      "Available for embedded roles within agencies and internal teams. Experienced working under NDA, delivering to client specs, and operating as a reliable extension of your delivery team.",
   },
 ];
 

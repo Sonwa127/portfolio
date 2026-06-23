@@ -30,7 +30,7 @@ export default function Navbar() {
           href="#top"
           className="font-mono-custom text-accent text-sm tracking-widest hover:opacity-80 transition-opacity"
         >
-          ann.dev
+          Ann Chisom Sokwueaku
         </Link>
 
         <ul className="flex gap-8">

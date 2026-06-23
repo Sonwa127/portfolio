@@ -5,13 +5,18 @@ import { projects, CATEGORIES } from "@/data/projects";
 import ProjectCard from "@/components/ui/ProjectCard";
 import type { Category } from "@/data/projects";
 
+const INITIAL_COUNT = 10;
+
 export default function Projects() {
   const [active, setActive] = useState<Category | "all">("all");
+  const [showAll, setShowAll] = useState(false);
 
   const filtered =
     active === "all"
       ? projects
       : projects.filter((p) => p.categories.includes(active));
+
+  const visible = showAll ? filtered : filtered.slice(0, INITIAL_COUNT);
 
   return (
     <section id="projects" className="py-24 border-t border-border">
@@ -28,7 +33,10 @@ export default function Projects() {
           {CATEGORIES.map((cat) => (
             <button
               key={cat.key}
-              onClick={() => setActive(cat.key)}
+              onClick={() => {
+                setActive(cat.key);
+                setShowAll(false);
+              }}
               className={`font-mono-custom text-[11px] tracking-wide px-3.5 py-1.5 rounded border transition-colors ${
                 active === cat.key
                   ? "bg-[#0F2D20] border-[#1A4A32] text-accent"
@@ -45,10 +53,32 @@ export default function Projects() {
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filtered.map((project) => (
+          {visible.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+
+        {filtered.length > INITIAL_COUNT && !showAll && (
+          <div className="mt-10 text-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="font-mono-custom text-[11px] tracking-wide px-6 py-3 border border-border hover:border-accent hover:text-accent text-text-secondary rounded transition-colors"
+            >
+              Load more projects ({filtered.length - INITIAL_COUNT} remaining)
+            </button>
+          </div>
+        )}
+
+        {showAll && filtered.length > INITIAL_COUNT && (
+          <div className="mt-10 text-center">
+            <button
+              onClick={() => setShowAll(false)}
+              className="font-mono-custom text-[11px] tracking-wide px-6 py-3 border border-border hover:border-accent hover:text-accent text-text-secondary rounded transition-colors"
+            >
+              Show less
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
