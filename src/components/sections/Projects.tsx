@@ -5,18 +5,19 @@ import { projects, CATEGORIES } from "@/data/projects";
 import ProjectCard from "@/components/ui/ProjectCard";
 import type { Category } from "@/data/projects";
 
-const INITIAL_COUNT = 10;
+const PAGE_SIZE = 5;
 
 export default function Projects() {
   const [active, setActive] = useState<Category | "all">("all");
-  const [showAll, setShowAll] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filtered =
     active === "all"
       ? projects
       : projects.filter((p) => p.categories.includes(active));
 
-  const visible = showAll ? filtered : filtered.slice(0, INITIAL_COUNT);
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
 
   return (
     <section id="projects" className="py-24 border-t border-border">
@@ -35,7 +36,7 @@ export default function Projects() {
               key={cat.key}
               onClick={() => {
                 setActive(cat.key);
-                setShowAll(false);
+                setVisibleCount(PAGE_SIZE);
               }}
               className={`font-mono-custom text-[11px] tracking-wide px-3.5 py-1.5 rounded border transition-colors ${
                 active === cat.key
@@ -49,6 +50,7 @@ export default function Projects() {
         </div>
 
         <p className="font-mono-custom text-[11px] text-text-muted mb-8">
+          <span className="text-accent">{visible.length}</span> of{" "}
           <span className="text-accent">{filtered.length}</span> projects
         </p>
 
@@ -58,24 +60,13 @@ export default function Projects() {
           ))}
         </div>
 
-        {filtered.length > INITIAL_COUNT && !showAll && (
+        {hasMore && (
           <div className="mt-10 text-center">
             <button
-              onClick={() => setShowAll(true)}
+              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
               className="font-mono-custom text-[11px] tracking-wide px-6 py-3 border border-border hover:border-accent hover:text-accent text-text-secondary rounded transition-colors"
             >
-              Load more projects ({filtered.length - INITIAL_COUNT} remaining)
-            </button>
-          </div>
-        )}
-
-        {showAll && filtered.length > INITIAL_COUNT && (
-          <div className="mt-10 text-center">
-            <button
-              onClick={() => setShowAll(false)}
-              className="font-mono-custom text-[11px] tracking-wide px-6 py-3 border border-border hover:border-accent hover:text-accent text-text-secondary rounded transition-colors"
-            >
-              Show less
+              Load more ({filtered.length - visibleCount} remaining)
             </button>
           </div>
         )}

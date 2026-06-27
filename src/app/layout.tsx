@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CursorGlow from "@/components/ui/CursorGlow";
 
 export const metadata: Metadata = {
-  title: "Ann Chisom Sokwueaku , AI Automation Engineer",
+  title: "Ann Chisom Sokwueaku | AI Automation Engineer",
   description:
-    "I design and ship AI-powered automation systems for businesses across the UK, US, and Australia. Multi-agent pipelines, voice AI, RPA, and intelligent workflow integrations.",
+    "I design and build automation systems that eliminate manual work for businesses across the US, UK, EU, Canada, Australia, and Singapore. Workflow automation, RPA, AI agents, voice AI, and CRM integrations.",
   keywords: [
     "AI automation",
     "n8n",
@@ -14,11 +15,13 @@ export const metadata: Metadata = {
     "AI engineer",
     "UiPath",
     "LangChain",
+    "automation engineer",
+    "CRM automation",
   ],
   openGraph: {
-    title: "Ann Chisom Sokwueaku , AI Automation Engineer",
+    title: "Ann Chisom Sokwueaku | AI Automation Engineer",
     description:
-      "Building AI systems that eliminate manual work, scale without hiring, and run while you sleep.",
+      "I build automation systems that eliminate manual work, scale without hiring, and run while you sleep.",
     type: "website",
   },
 };
@@ -30,7 +33,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+      <body>
+        <CursorGlow />
+        {children}
+      </body>
     </html>
   );
 }

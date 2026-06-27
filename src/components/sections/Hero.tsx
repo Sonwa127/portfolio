@@ -45,10 +45,17 @@ export default function Hero() {
 
   return (
     <section id="top" className="min-h-screen flex items-center pt-16">
-      <div className="max-w-5xl mx-auto px-6 py-24">
-        <p className="font-mono-custom text-accent text-xs tracking-[0.2em] uppercase mb-6">
-          AI Automation Engineer
-        </p>
+      <div className="max-w-5xl mx-auto px-6 py-32">
+
+        <div className="flex items-center gap-4 mb-6">
+          <p className="font-mono-custom text-accent text-xs tracking-[0.2em] uppercase">
+            AI Automation Engineer
+          </p>
+          <span className="flex items-center gap-1.5 font-mono-custom text-[11px] text-accent bg-[#0F2D20] border border-[#1A4A32] px-3 py-1 rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block"></span>
+            Available for work
+          </span>
+        </div>
 
         <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-[1.1] mb-6">
           I build systems that
@@ -58,11 +65,11 @@ export default function Hero() {
         </h1>
 
         <p className="text-text-secondary text-lg max-w-xl leading-relaxed mb-10">
-   If your team is doing it manually, I automate it. 
-  Workflow automation, RPA, AI agents, voice systems, CRM integrations, 
-  internal tools, SOPs, and project scoping, built and shipped for clients 
-  across the US, UK, EU, Canada, Australia, Singapore and more.
-</p>
+          If your team is doing it manually, I automate it. Workflow automation,
+          RPA, AI agents, voice systems, CRM integrations, internal tools, SOPs,
+          and project scoping, built and shipped for clients across the US, UK,
+          EU, Canada, Australia, Singapore and more.
+        </p>
 
         <div className="flex gap-4 flex-wrap">
           <Link
