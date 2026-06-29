@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from "next";
 import "./globals.css";
 import CursorGlow from "@/components/ui/CursorGlow";
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body>
         <CursorGlow />
         <Analytics />
+        <SpeedInsights />
         {children}
       </body>
     </html>
