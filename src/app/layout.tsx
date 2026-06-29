@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from "next";
 import "./globals.css";
 import CursorGlow from "@/components/ui/CursorGlow";
@@ -52,6 +53,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body>
         <CursorGlow />
+        <Analytics />
         {children}
       </body>
     </html>
