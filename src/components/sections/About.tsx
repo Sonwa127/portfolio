@@ -39,8 +39,7 @@ export default function About() {
               scalable processes that run reliably behind the scenes.
             </p>
             <p>
-              My work spans clients across the US, UK, EU, Canada, Australia, and Singapore
-              in field services, recruitment, real estate, hospitality, healthcare, and sales.
+              I've built automation systems for clients across the US, UK, EU, Canada, Australia, and Singapore in industries including field services, recruitment, real estate, hospitality, healthcare, and sales.
             </p>
             <p>
               Whether working directly with business owners or embedded within client teams,
@@ -48,8 +47,7 @@ export default function About() {
               visibility, and free teams to focus on higher-value work.
             </p>
             <p>
-              Every solution is documented, tested, and handed over cleanly so your team can
-              confidently own and scale it long after implementation.
+              Every solution is documented, tested, and handed over with clear SOPs so your team can own, maintain, and scale it long after implementation.
             </p>
           </div>
 
