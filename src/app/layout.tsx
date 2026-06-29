@@ -36,6 +36,11 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  alternates: {
+  types: {
+    "application/rss+xml": "https://annchisom.com/rss.xml",
+  },
+},
   twitter: {
     card: "summary_large_image",
     title: "Ann Chisom Sokwueaku | AI Automation Engineer",
