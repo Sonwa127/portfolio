@@ -10,6 +10,13 @@ const phrases = [
   "run while you sleep.",
 ];
 
+const stats = [
+  { value: "30+", label: "Production Systems" },
+  { value: "6", label: "Countries" },
+  { value: "8+", label: "Industries" },
+  { value: "100+", label: "Processes Automated" },
+];
+
 export default function Hero() {
   const [text, setText] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);
@@ -71,7 +78,7 @@ export default function Hero() {
           EU, Canada, Australia, Singapore and more.
         </p>
 
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-4 flex-wrap mb-16">
           <Link
             href="#projects"
             className="inline-block px-6 py-3 bg-accent text-base font-display font-semibold text-sm rounded-md hover:bg-accent-hover transition-colors"
@@ -87,6 +94,20 @@ export default function Hero() {
             Book a call
           </Link>
         </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-border">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <p className="font-display text-3xl font-bold text-accent mb-1">
+                {stat.value}
+              </p>
+              <p className="font-mono-custom text-[11px] text-text-secondary tracking-widest uppercase">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

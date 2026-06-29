@@ -38,7 +38,6 @@ export const CATEGORIES: { key: Category | "all"; label: string }[] = [
 ];
 
 export const projects: Project[] = [
-  // TOP 5 STRONGEST
   {
     id: "meddesk",
     title: "MedDesk - HIPAA-Compliant Healthcare CRM",
@@ -51,7 +50,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Sonwa127/meddesk-crm",
     liveUrl: "https://meddesk-crm.vercel.app/",
     featured: true,
-    stats: ["8 DB tables", "Multi-tenant", "HIPAA-compliant", "AI insights"],
+    stats: ["8 DB tables", "Multi-tenant", "HIPAA-compliant", "AI insights", "Tamper-proof audit log", "Unlimited practices supported"],
     problem: "Independent medical practices in the $300K to $700K revenue range run their operations on spreadsheets and disconnected tools. No real-time financial visibility, no staff accountability system, patient intake still on paper, and KPIs living in someone's personal Excel file. Practices lose money silently and compliance is an afterthought.",
     solution: "A full HIPAA-compliant multi-tenant CRM that replaces all of that. One system, every practice, zero spreadsheets. Built on Next.js and Supabase with row-level security enforced at the database level.",
     howItWorks: [
@@ -87,7 +86,7 @@ export const projects: Project[] = [
     categories: ["workflow"],
     image: "/images/projects/bellandaine.png",
     featured: true,
-    stats: ["90+ nodes", "5 systems connected", "Full job lifecycle automated"],
+    stats: ["90+ nodes", "5 systems connected", "Full job lifecycle automated", "0 manual data entry points", "Invoice to Xero auto-synced", "Documents auto-filed to SharePoint"],
     problem: "A field services business was managing jobs, technician scheduling, documents, and invoicing across disconnected tools. Data was being entered manually multiple times across systems, causing errors, delays, and missed billing.",
     solution: "A 90-node n8n workflow that connects every part of the ops cycle. Jobs flow from creation through scheduling, document generation, and financial sync automatically, with no manual data entry at any stage.",
     howItWorks: [
@@ -124,7 +123,7 @@ export const projects: Project[] = [
     image: "/images/projects/ai-content-engine.png",
     githubUrl: "https://github.com/Sonwa127/ai-content-engine",
     featured: true,
-    stats: ["52 nodes", "Dual LLM", "3 content types", "Built-in QA"],
+    stats: ["52 nodes", "Dual LLM", "3 content types", "Built-in QA pass", "Live research on every piece", "Style rubric enforced automatically"],
     problem: "Content teams producing at scale struggle with consistency, research quality, and QA. Manual writing is slow, outsourced content is generic, and there is no system that checks its own output before delivery.",
     solution: "A self-checking AI content engine that classifies each brief, routes it through the right pipeline, researches live sources via Tavily, drafts section by section against a Google Docs style rubric, and runs a built-in QA pass before the content is delivered.",
     howItWorks: [
@@ -161,7 +160,7 @@ export const projects: Project[] = [
     categories: ["ai", "crm", "workflow"],
     image: "/images/projects/sms-sales.png",
     featured: true,
-    stats: ["3-path lead routing", "A/B tested outreach", "Auto CRM deal creation"],
+    stats: ["3-path lead routing", "A/B tested outreach", "Auto CRM deal creation", "0 human touchpoints", "Full conversation memory", "Non-responders followed up automatically"],
     problem: "Healthcare sales teams waste hours sending manual outreach messages and following up with leads who never respond. Most CRMs sit idle because reps forget to log conversations or create deals. Qualified prospects slip through the cracks due to slow follow-up.",
     solution: "An autonomous SMS sales agent that runs the entire top-of-funnel sales cycle without human involvement. It sends personalized opening messages, handles two-way conversations using an AI agent with a product knowledge base, scores each lead's intent, and automatically creates deals in Pipedrive for qualified prospects.",
     howItWorks: [
@@ -196,7 +195,7 @@ export const projects: Project[] = [
     categories: ["rpa", "ai"],
     image: "/images/projects/invoice.png",
     featured: true,
-    stats: ["Auto-approve + human review", "Full audit trail", "Google Drive integrated"],
+    stats: ["Auto-approve + human review", "Full audit trail", "Google Drive integrated", "Hours to minutes", "Zero manual routing", "Every decision timestamped"],
     problem: "Finance teams spend hours manually reviewing invoices, checking figures, and routing approvals through email chains. Human error is common and there is no audit trail of who approved what and when.",
     solution: "A UiPath agentic process that monitors a Google Drive folder for new invoices, extracts all key fields automatically using Document Understanding, and routes each invoice through an AI decision agent that either auto-approves or flags for human review via Action Center.",
     howItWorks: [
@@ -222,8 +221,6 @@ export const projects: Project[] = [
       "Execution trail timestamps every step for compliance and audit purposes",
     ],
   },
-
-  // REST OF PROJECTS
   {
     id: "aria",
     title: "Aria - Hotel WhatsApp Assistant",
@@ -235,7 +232,7 @@ export const projects: Project[] = [
     image: "/images/projects/aria.png",
     demoUrl: "https://www.loom.com/share/dc7287e1b49246d0b87b3968c67ec00c",
     githubUrl: "https://github.com/Sonwa127/aria-hotel-whatsapp-assistant",
-    stats: ["Multilingual", "2 AI pipelines", "Real-time room data"],
+    stats: ["Multilingual", "2 AI pipelines", "Real-time room data", "24/7 availability", "Receipt verified in seconds", "Zero front desk involvement for routine queries"],
     problem: "Hotel front desk staff spend hours answering repetitive guest messages on WhatsApp: room availability, booking confirmations, receipt questions. This leaves little time for high-value guest interactions. Most small and mid-size hotels cannot afford 24/7 staffing.",
     solution: "Aria is a multilingual WhatsApp AI agent that handles the full guest communication cycle autonomously. It plugs into the hotel's existing WhatsApp number via GreenAPI, pulls live room data from Google Sheets, and uses GPT-4o Vision to verify receipts with no human needed for routine queries.",
     howItWorks: [
@@ -268,7 +265,7 @@ export const projects: Project[] = [
     stack: ["Vapi", "n8n", "Google Calendar", "OpenAI"],
     categories: ["ai", "workflow"],
     image: "/images/projects/amah.png",
-    stats: ["24/7 availability", "0 missed calls", "Instant response"],
+    stats: ["24/7 availability", "0 missed calls", "Instant response", "Appointments booked on the call", "Real-time calendar sync", "Fraction of receptionist cost"],
     problem: "Trades businesses and agencies miss leads constantly because nobody is available to answer calls outside business hours. Hiring a receptionist is expensive and still limited to working hours.",
     solution: "Amah is an AI phone receptionist built on Vapi that handles inbound calls 24/7. It greets callers naturally, identifies their needs, qualifies them, checks availability, and books appointments directly into Google Calendar without any human involvement.",
     howItWorks: [
@@ -304,7 +301,7 @@ export const projects: Project[] = [
     image: "/images/projects/video-ads.png",
     githubUrl: "https://github.com/Sonwa127/ai-video-ads-automation",
     demoUrl: "https://www.loom.com/share/c953e5306ba043379e2fa2540c33cf22",
-    stats: ["30-sec vertical ad", "6 tools integrated", "End-to-end in one workflow"],
+    stats: ["30-sec vertical ad", "6 tools integrated", "End-to-end in one workflow", "0 manual editing", "Auto-delivered to Google Drive", "Full production team replaced"],
     problem: "Creating video ads requires a full production team: copywriters, voiceover artists, video editors, and caption designers. Most small and mid-size brands cannot afford this pipeline or the time it takes.",
     solution: "A single n8n workflow that replaces the entire video production pipeline. Feed it a landing page or offer text and it outputs a complete 30-second vertical ad with cinematic B-roll, AI voiceover, synced captions, and automatic Google Drive delivery.",
     howItWorks: [
@@ -340,7 +337,7 @@ export const projects: Project[] = [
     image: "/images/projects/ai-audit-1.png",
     extraImages: ["/images/projects/ai-audit-2.png"],
     liveUrl: "https://ai-audit-five-gamma.vercel.app",
-    stats: ["6 business categories", "30 questions", "Personalized PDF report"],
+    stats: ["6 business categories", "30 questions", "Personalized PDF report", "Auto email delivery", "ROI projections included", "Calendly CTA converts readers to calls"],
     problem: "Most businesses know they should be using AI but have no clear picture of where they actually stand or where to start. Generic advice does not account for their specific tools, team size, or processes.",
     solution: "A 30-question diagnostic that assesses AI readiness across 6 business dimensions and generates a fully personalized PDF report with specific recommendations and ROI projections, delivered straight to the inbox.",
     howItWorks: [
@@ -373,7 +370,7 @@ export const projects: Project[] = [
     stack: ["n8n", "OpenAI", "Whisper", "Telegram"],
     categories: ["ai", "workflow"],
     image: "/images/projects/ai-content-agent.png",
-    stats: ["7 content tools", "Voice-first", "Zero tool switching"],
+    stats: ["7 content tools", "Voice-first", "Zero tool switching", "Seconds not hours", "Blog, LinkedIn, image and video in one system", "No typing required"],
     problem: "Marketing teams waste hours switching between tools to create content. Writing briefs, generating copy, sourcing images, and publishing to different platforms requires multiple people and constant context switching.",
     solution: "A single Telegram-based AI agent that accepts a voice message or text brief and handles the entire content creation cycle autonomously. The agent classifies the content type and routes it to the right tool: blog post, LinkedIn content, image generation, video, or image search.",
     howItWorks: [
@@ -407,7 +404,7 @@ export const projects: Project[] = [
     stack: ["n8n", "Twilio", "OpenAI", "Google Sheets", "Gmail"],
     categories: ["ai", "workflow", "crm"],
     image: "/images/projects/fundraising-sync.png",
-    stats: ["Multi-trigger architecture", "Auto deduplication", "Real-time record updates"],
+    stats: ["Multi-trigger architecture", "Auto deduplication", "Real-time record updates", "Scales to thousands of contacts", "Opt-outs handled automatically", "Escalations routed via Gmail"],
     problem: "Fundraising events generate large volumes of participant data across multiple events that needs to be tracked, deduplicated, and followed up manually. Teams were spending hours chasing donations and updating records by hand.",
     solution: "A multi-trigger automation that syncs participant data from the fundraising platform API into Google Sheets, runs AI-powered SMS conversations to follow up on donations, handles inbound replies with an AI agent, and manages escalations, opt-outs, and record updates automatically.",
     howItWorks: [
@@ -443,7 +440,7 @@ export const projects: Project[] = [
     stack: ["n8n", "Gmail API", "GoHighLevel"],
     categories: ["workflow", "crm"],
     image: "/images/projects/email-drip.png",
-    stats: ["3 emails over 4 days", "Click-based qualification", "Auto-tagging"],
+    stats: ["3 emails over 4 days", "Click-based qualification", "Auto-tagging", "Scales to thousands with no extra work", "Warm leads only passed to sales", "0 manual sending"],
     problem: "Sales teams manually follow up with every lead regardless of interest level, wasting time on cold prospects while warm leads go cold waiting for a response.",
     solution: "A tag-triggered drip sequence that runs automatically. Three timed emails go out over 4 days, then a conditional check identifies who clicked the booking link. Engaged leads get tagged for the sales team, unresponsive ones exit the sequence cleanly.",
     howItWorks: [
@@ -478,7 +475,7 @@ export const projects: Project[] = [
     categories: ["ai", "workflow", "crm"],
     image: "/images/projects/email-outreach-timezone.png",
     githubUrl: "https://github.com/Sonwa127/ai-email-outreach-timezone",
-    stats: ["AI time zone detection", "GPT-4 personalization", "Max 5 emails per run"],
+    stats: ["AI time zone detection", "GPT-4 personalization", "Max 5 emails per run", "Higher open rates", "No emails sent outside business hours", "Lead status auto-updated after send"],
     problem: "Cold outreach sent at the wrong time gets ignored or flagged as spam. Generic bulk emails have low reply rates. Sales teams waste time manually writing and scheduling emails for different time zones.",
     solution: "An automated outreach workflow that infers each lead's time zone using AI, checks whether it is currently business hours in their location, and only sends if the timing is right. GPT-4 writes a fully personalized email for each lead based on their industry, pain point, and location.",
     howItWorks: [
@@ -513,7 +510,7 @@ export const projects: Project[] = [
     stack: ["GoHighLevel", "360dialog", "n8n", "OpenAI"],
     categories: ["ai", "crm", "workflow"],
     image: "/images/projects/luxus.png",
-    stats: ["3-path lead routing", "24/7 response", "Auto CRM contact creation"],
+    stats: ["3-path lead routing", "24/7 response", "Auto CRM contact creation", "Seconds to first response", "Cold leads exit without consuming agent time", "Hot leads pre-qualified before handoff"],
     problem: "Luxury real estate brands receive high volumes of WhatsApp inquiries but have no system to qualify them. Sales agents waste time on cold leads while hot prospects wait too long for a response.",
     solution: "A WhatsApp AI agent that intercepts every inbound message, scores lead intent using OpenAI, and routes hot prospects directly to agents via GoHighLevel. Warm leads are re-engaged automatically. Cold leads exit cleanly.",
     howItWorks: [
