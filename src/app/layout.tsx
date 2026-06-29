@@ -22,7 +22,24 @@ export const metadata: Metadata = {
     title: "Ann Chisom Sokwueaku | AI Automation Engineer",
     description:
       "I build automation systems that eliminate manual work, scale without hiring, and run while you sleep.",
+    url: "https://annchisom.com",
+    siteName: "Ann Chisom Sokwueaku",
+    images: [
+      {
+        url: "https://annchisom.com/api/og",
+        width: 1200,
+        height: 630,
+        alt: "Ann Chisom Sokwueaku - AI Automation Engineer",
+      },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ann Chisom Sokwueaku | AI Automation Engineer",
+    description:
+      "I build automation systems that eliminate manual work, scale without hiring, and run while you sleep.",
+    images: ["https://annchisom.com/api/og"],
   },
 };
 
