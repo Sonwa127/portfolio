@@ -6,7 +6,7 @@ export default function Footer() {
           <p className="font-mono-custom text-accent text-xs tracking-[0.2em] uppercase">
             Ann Chisom Sokwueaku
           </p>
-          <span className="flex items-center gap-1.5 font-mono-custom text-[11px] text-accent bg-[#0F2D20] border border-[#1A4A32] px-3 py-1 rounded-full">
+          <span className="flex items-center gap-1.5 font-mono-custom text-[11px] text-accent bg-card border border-border-hover px-3 py-1 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse inline-block"></span>
             Available for work
           </span>

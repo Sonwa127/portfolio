@@ -10,15 +10,15 @@
   }
 
   body {
-    background-color: #0A0A0F;
-    color: #E8E8E8;
+    background-color: #FBF6F3;
+    color: #2B2024;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    background: #6EE7B7;
-    color: #0A0A0F;
+    background: #C97B8B;
+    color: #FBF6F3;
   }
 
   ::-webkit-scrollbar {
@@ -26,16 +26,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0A0A0F;
+    background: #FBF6F3;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1E1E2E;
+    background: #E8D2D8;
     border-radius: 2px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #6EE7B7;
+    background: #5C1B32;
   }
 }
 
@@ -48,5 +48,3 @@
     font-family: 'Space Mono', monospace;
   }
 }
-
-

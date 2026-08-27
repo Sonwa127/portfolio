@@ -146,7 +146,7 @@ export default function Blog() {
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex flex-wrap gap-1.5">
                       {article.tag_list.slice(0, 2).map((tag) => (
-                        <span key={tag} className="font-mono-custom text-[10px] text-accent bg-[#0F2D20] border border-[#1A4A32] px-2 py-0.5 rounded">
+                        <span key={tag} className="font-mono-custom text-[10px] text-accent bg-card border border-border-hover px-2 py-0.5 rounded">
                           {tag}
                         </span>
                       ))}

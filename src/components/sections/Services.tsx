@@ -1,9 +1,19 @@
+"use client";
+
+import { useState } from "react";
+
 const services = [
   {
     icon: "⚙️",
     title: "Workflow & Process Automation",
     description:
       "End-to-end automation using n8n, Make, Power Automate, or Zapier. From simple tool integrations to complex multi-step workflows with conditional logic, error handling, and full documentation.",
+  },
+  {
+    icon: "💻",
+    title: "Custom Software Development",
+    description:
+      "Full-stack applications built from scratch with Python, Next.js, and Supabase, not just no-code tools stitched together. Custom CRMs, internal platforms, and data pipelines built to the same standard as a production engineering team.",
   },
   {
     icon: "🤖",
@@ -55,31 +65,48 @@ const services = [
   },
 ];
 
+function ServiceCard({ service }: { service: (typeof services)[number] }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="bg-surface border border-border rounded-lg p-4 hover:border-border-hover transition-colors flex flex-col">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="text-lg">{service.icon}</span>
+        <h3 className="font-display font-medium text-text-primary text-[13px] leading-snug">
+          {service.title}
+        </h3>
+      </div>
+      <p
+        className={`text-text-muted text-[12.5px] leading-relaxed ${
+          expanded ? "" : "line-clamp-2"
+        }`}
+      >
+        {service.description}
+      </p>
+      <button
+        onClick={() => setExpanded((e) => !e)}
+        className="font-mono-custom text-[10.5px] text-accent hover:underline mt-2 self-start"
+      >
+        {expanded ? "Read less" : "Read more →"}
+      </button>
+    </div>
+  );
+}
+
 export default function Services() {
   return (
-    <section id="services" className="py-24 border-t border-border">
+    <section id="services" className="py-16 border-t border-border">
       <div className="max-w-5xl mx-auto px-6">
-        <span className="font-mono-custom text-accent text-[11px] tracking-[0.2em] uppercase block mb-3">
+        <span className="font-mono-custom text-accent text-[11px] tracking-[0.2em] uppercase block mb-2">
           what i do
         </span>
-        <h2 className="font-display text-3xl font-bold text-text-primary mb-12">
+        <h2 className="font-display text-2xl font-bold text-text-primary mb-6">
           Services
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {services.map((service) => (
-            <div
-              key={service.title}
-              className="bg-surface border border-border rounded-lg p-5 hover:border-border-hover transition-colors"
-            >
-              <span className="text-2xl block mb-3">{service.icon}</span>
-              <h3 className="font-display font-medium text-text-primary text-sm mb-2">
-                {service.title}
-              </h3>
-              <p className="text-text-muted text-sm leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            <ServiceCard key={service.title} service={service} />
           ))}
         </div>
       </div>

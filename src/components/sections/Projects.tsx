@@ -40,7 +40,7 @@ export default function Projects() {
               }}
               className={`font-mono-custom text-[11px] tracking-wide px-3.5 py-1.5 rounded border transition-colors ${
                 active === cat.key
-                  ? "bg-[#0F2D20] border-[#1A4A32] text-accent"
+                  ? "bg-card border-border-hover text-accent"
                   : "bg-surface border-border text-text-secondary hover:border-accent hover:text-accent"
               }`}
             >
