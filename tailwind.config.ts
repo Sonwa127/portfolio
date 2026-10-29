@@ -22,9 +22,9 @@ const config: Config = {
         "text-muted": "#8A7378",
       },
       fontFamily: {
-        display: ["Space Grotesk", "sans-serif"],
-        body: ["Inter", "sans-serif"],
-        mono: ["Space Mono", "monospace"],
+        display: ["var(--font-space-grotesk)", "Space Grotesk", "sans-serif"],
+        body: ["var(--font-inter)", "Inter", "sans-serif"],
+        mono: ["var(--font-space-mono)", "Space Mono", "monospace"],
       },
       animation: {
         blink: "blink 1s step-end infinite",
