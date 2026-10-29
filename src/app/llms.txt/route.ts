@@ -21,15 +21,17 @@ Field services, healthcare, hospitality, real estate, recruitment, nonprofit, ma
 n8n, Make, Zapier, Power Automate, UiPath, OpenAI, Claude API, LangChain, Vapi, Twilio, Supabase, Next.js, Retool, Botpress, ManyChat, GoHighLevel, HubSpot, Pipedrive, Zoho, Airtable, Notion, Python, JavaScript
 
 ## Links
-- Website: https://annchisom.com
-- GitHub: https://github.com/Sonwa127
-- LinkedIn: https://www.linkedin.com/in/annchisom
-- Blog: https://dev.to/sonwa
-- Book a call: https://calendly.com/sonwa/consultation`
+- [Website](https://annchisom.com): portfolio, services and contact form
+- [Case studies](https://annchisom.com/#projects): selected automation and AI projects
+- [MedDesk case study](https://annchisom.com/projects/meddesk): healthcare CRM architected for HIPAA-regulated practices
+- [GitHub](https://github.com/Sonwa127): code and demos
+- [LinkedIn](https://www.linkedin.com/in/annchisom): professional profile
+- [Articles](https://dev.to/sonwa): writing on automation and AI systems
+- [Book a call](https://calendly.com/sonwa/consultation): free 30-minute automation audit`
 
   return new NextResponse(content, {
     headers: {
-      "Content-Type": "text/plain",
+      "Content-Type": "text/markdown; charset=utf-8",
     },
   })
 }
