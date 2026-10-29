@@ -1,8 +1,6 @@
 const stack = [
-  "n8n", "Make", "Power Automate", "UiPath", "OpenAI", "Claude API",
-  "Vapi", "LangChain", "Supabase", "Next.js", "Python", "JavaScript",
-  "Twilio", "HubSpot", "GoHighLevel", "Airtable", "Botpress", "Retool",
-  "Pipedrive", "Zoho", "ClickUp", "node.js", "Replit", "Zapier", "Notion", "Softr",
+  "n8n", "Make", "UiPath", "Power Automate", "OpenAI", "Claude API",
+  "LangChain", "Supabase", "Next.js", "Python", "Twilio", "HubSpot",
 ];
 
 export default function About() {
