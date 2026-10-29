@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         {project.image ? (
           <Image
             src={project.image}
-            alt={project.title}
+            alt={project.imageAlt ?? ""}
             fill
             className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-300"
           />
@@ -72,6 +72,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Live site: ${project.title}`}
                 className="font-mono-custom text-[10px] text-accent hover:underline"
               >
                 Live →
@@ -82,6 +83,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`Demo: ${project.title}`}
                 className="font-mono-custom text-[10px] text-accent hover:underline"
               >
                 Demo →
@@ -92,6 +94,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`GitHub repository: ${project.title}`}
                 className="font-mono-custom text-[10px] text-text-secondary hover:text-accent transition-colors"
               >
                 GitHub →
@@ -101,6 +104,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
           <Link
             href={`/projects/${project.id}`}
+            aria-label={`View ${project.title} case study`}
             className="font-mono-custom text-[10px] px-2.5 py-1 border border-border hover:border-accent hover:text-accent text-text-secondary rounded transition-colors whitespace-nowrap"
           >
             View →
