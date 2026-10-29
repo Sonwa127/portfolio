@@ -194,7 +194,7 @@ export const projects: Project[] = [
     id: "ai-sms-sales",
     title: "AI SMS Sales Agent",
     tagline: "Conversational AI that qualifies leads and creates CRM deals over SMS",
-    result: "Qualifies leads and creates CRM deals over SMS with no human involvement",
+    result: "Closed 40+ deals in 49 days, qualifying leads and creating CRM deals over SMS",
     description: "An autonomous SMS sales agent that runs the entire top-of-funnel sales cycle for a healthcare client without human involvement. Initiates A/B tested outreach, handles full two-way conversations, scores lead intent, and automatically creates deals in Pipedrive for qualified prospects.",
     vertical: "Sales Automation",
     client: "NDA Client",
@@ -202,7 +202,7 @@ export const projects: Project[] = [
     categories: ["ai", "crm", "workflow"],
     image: "/images/projects/sms-sales.png",
     featured: true,
-    stats: ["3-path lead routing", "A/B tested outreach", "Auto CRM deal creation", "0 human touchpoints", "Full conversation memory", "Non-responders followed up automatically"],
+    stats: ["40+ deals closed in 49 days", "3-path lead routing", "A/B tested outreach", "Auto CRM deal creation", "0 human touchpoints", "Full conversation memory", "Non-responders followed up automatically"],
     problem: "Healthcare sales teams waste hours sending manual outreach messages and following up with leads who never respond. Most CRMs sit idle because reps forget to log conversations or create deals. Qualified prospects slip through the cracks due to slow follow-up.",
     solution: "An autonomous SMS sales agent that runs the entire top-of-funnel sales cycle without human involvement. It sends personalized opening messages, handles two-way conversations using an AI agent with a product knowledge base, scores each lead's intent, and automatically creates deals in Pipedrive for qualified prospects.",
     howItWorks: [
@@ -215,6 +215,7 @@ export const projects: Project[] = [
       "A separate loop handles non-responders with automated follow-up messages",
     ],
     results: [
+      "Closed 40+ deals in 49 days",
       "Full sales conversations handled with zero human involvement",
       "Leads automatically scored and routed based on intent",
       "Qualified deals created in Pipedrive without any manual data entry",
