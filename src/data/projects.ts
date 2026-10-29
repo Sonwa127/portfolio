@@ -81,7 +81,7 @@ export const projects: Project[] = [
   {
     id: "land-survey-digitization",
     title: "Large-Scale Land Survey Digitization Pipeline",
-    tagline: "Turning ~3 million scanned land survey documents into structured, searchable data",
+    tagline: "A pipeline built to turn ~3 million scanned land survey documents into structured, searchable data",
     result: "Open-source pipeline built to digitize roughly 3 million survey documents",
     description: "A government-adjacent digitization pipeline built to process approximately 3 million land survey documents. The system compresses, OCRs, and parses each document through a fully open-source stack, with preprocessing tuned specifically for real-world scan quality rather than generic OCR benchmarks.",
     vertical: "GovTech / Document Digitization",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     stack: ["PaddleOCR-VL", "Qwen2-VL-7B", "Tesseract", "Python/FastAPI", "PostgreSQL", "Redis/Celery", "Cloudflare R2", "Docker"],
     categories: ["ai", "dev"],
     featured: true,
-    stats: ["~3M documents", "Fully open-source stack", "GPU + CPU hybrid OCR", "Custom-tuned preprocessing", "Vision-language + traditional OCR combined", "Built for real-world scan quality"],
+    stats: ["Built for ~3M documents", "Peaks near 500 docs/hour", "Fully open-source stack", "GPU + CPU hybrid OCR", "Custom-tuned preprocessing", "Vision-language + traditional OCR combined", "Built for real-world scan quality"],
     problem: "A large volume of physical land survey records, roughly 3 million documents, existed only as scanned PDFs with no structured, searchable data behind them. Off-the-shelf OCR tools failed on the real scan quality: skewed pages, inconsistent lighting, and dense handwritten annotations that generic OCR benchmarks don't account for.",
     solution: "A fully open-source digitization pipeline that compresses, OCRs, and parses each document at scale. Vision-language models handle the documents generic OCR can't read, while a fine-tuned Tesseract instance handles high-volume standard text as the CPU workhorse, keeping cost manageable against a fixed project fee.",
     howItWorks: [
@@ -101,13 +101,14 @@ export const projects: Project[] = [
       "The full pipeline runs end to end via a single chained process, confirmed working on real documents",
     ],
     results: [
+      "Processes roughly 150 to 250 documents per active hour, peaking near 500, on the current setup",
       "First successful end-to-end pipeline run confirmed on real survey documents",
       "Preprocessing tuned specifically against real scan quality, not generic OCR test sets",
       "Hybrid GPU/CPU OCR routing keeps processing cost sustainable at millions-of-documents scale",
       "Fully open-source stack avoids per-document licensing costs that would be unworkable at this volume",
     ],
     highlights: [
-      "Handles ~3 million documents, a very different scale problem than a typical CRM or workflow build",
+      "Designed for ~3 million documents, a very different scale problem than a typical CRM or workflow build",
       "Custom preprocessing tuned against real-world scan artifacts rather than clean benchmark data",
       "Hybrid OCR strategy: vision-language models for hard cases, traditional OCR for volume, balancing accuracy against cost",
       "Built and evaluated against multiple OCR engines (Azure DI, PaddleOCR-VL, olmOCR, DeepSeek-OCR) before settling on the current stack",
