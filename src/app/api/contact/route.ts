@@ -26,10 +26,10 @@ export async function POST(req: Request) {
 
   const payload = {
     name: clean(body.name, 120),
+    business: clean(body.business, 200),
     email: clean(body.email, 200),
     task: clean(body.task, 2000),
-    tools: clean(body.tools, 500),
-    volume: clean(body.volume, 200),
+    information: clean(body.information, 2000),
     source: "annchisom.com",
     submittedAt: new Date().toISOString(),
   };
@@ -48,10 +48,13 @@ export async function POST(req: Request) {
       body: JSON.stringify(payload),
       signal: AbortSignal.timeout(10000),
     });
-    if (!res.ok) throw new Error(`Webhook responded ${res.status}`);
+    if (!res.ok) {
+      const detail = (await res.text().catch(() => "")).slice(0, 300);
+      throw new Error(`Webhook responded ${res.status}: ${detail}`);
+    }
     return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error("Contact form webhook failed:", err);
+    console.error("Contact form webhook failed:", WEBHOOK_URL, err);
     return NextResponse.json(
       { ok: false, error: "Something went wrong sending your message. Please email me directly." },
       { status: 502 }

@@ -67,13 +67,18 @@ export default function ContactForm() {
     <form onSubmit={onSubmit} className="space-y-4">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="cf-name" className={label}>Name</label>
+          <label htmlFor="cf-name" className={label}>Your name</label>
           <input id="cf-name" name="name" type="text" required maxLength={120} autoComplete="name" className={field} />
         </div>
         <div>
-          <label htmlFor="cf-email" className={label}>Email</label>
-          <input id="cf-email" name="email" type="email" required maxLength={200} autoComplete="email" className={field} />
+          <label htmlFor="cf-business" className={label}>Business name</label>
+          <input id="cf-business" name="business" type="text" maxLength={200} autoComplete="organization" className={field} />
         </div>
+      </div>
+
+      <div>
+        <label htmlFor="cf-email" className={label}>Email</label>
+        <input id="cf-email" name="email" type="email" required maxLength={200} autoComplete="email" className={field} />
       </div>
 
       <div>
@@ -84,20 +89,21 @@ export default function ContactForm() {
           required
           rows={4}
           maxLength={2000}
-          placeholder="Describe the manual process that is slowing your team down."
+          placeholder="Describe the task or process that is slowing your team down."
           className={field}
         />
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor="cf-tools" className={label}>Tools you use today</label>
-          <input id="cf-tools" name="tools" type="text" maxLength={500} placeholder="e.g. HubSpot, Google Sheets, Outlook" className={field} />
-        </div>
-        <div>
-          <label htmlFor="cf-volume" className={label}>Rough monthly volume</label>
-          <input id="cf-volume" name="volume" type="text" maxLength={200} placeholder="e.g. 500 invoices, 200 leads" className={field} />
-        </div>
+      <div>
+        <label htmlFor="cf-information" className={label}>What information do you need from me?</label>
+        <textarea
+          id="cf-information"
+          name="information"
+          rows={3}
+          maxLength={2000}
+          placeholder="e.g. pricing, timeline, examples of similar work, a demo"
+          className={field}
+        />
       </div>
 
       {/* Honeypot: hidden from people, filled by bots */}
