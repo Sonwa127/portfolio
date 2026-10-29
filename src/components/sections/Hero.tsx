@@ -169,7 +169,7 @@ export default function Hero() {
 
             <p className="text-text-secondary text-lg max-w-xl leading-relaxed mb-10">
               If your team is doing it manually, I automate it. Workflow automation,
-              RPA, AI agents, voice systems, CRM integrations, internal tools, SOPs,
+              RPA, AI agents, CRM integrations, internal tools, SOPs,
               and project scoping, built and shipped for clients across the US, UK,
               EU, Canada, Australia, Singapore and more.
             </p>

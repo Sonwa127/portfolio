@@ -158,7 +158,7 @@ export const projects: Project[] = [
     image: "/images/projects/ai-content-engine.png",
     githubUrl: "https://github.com/Sonwa127/ai-content-engine",
     featured: true,
-    stats: ["52 nodes", "Dual LLM", "3 content types", "Built-in QA pass", "Live research on every piece", "Style rubric enforced automatically"],
+    stats: ["Saves 20+ hours per week", "52 nodes", "Dual LLM", "3 content types", "Built-in QA pass", "Live research on every piece", "Style rubric enforced automatically"],
     problem: "Content teams producing at scale struggle with consistency, research quality, and QA. Manual writing is slow, outsourced content is generic, and there is no system that checks its own output before delivery.",
     solution: "A self-checking AI content engine that classifies each brief, routes it through the right pipeline, researches live sources via Tavily, drafts section by section against a Google Docs style rubric, and runs a built-in QA pass before the content is delivered.",
     howItWorks: [
@@ -172,6 +172,7 @@ export const projects: Project[] = [
       "Final content is delivered via the same chat interface",
     ],
     results: [
+      "Saves roughly 20+ hours of manual content work every week",
       "Long-form articles, landing pages, and short-form copy handled in one workflow",
       "Live research integrated into every piece via Tavily",
       "Built-in QA pass catches issues before content reaches the team",

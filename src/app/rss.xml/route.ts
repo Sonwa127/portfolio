@@ -24,7 +24,7 @@ export async function GET() {
   <channel>
     <title>Ann Chisom Sokwueaku</title>
     <link>https://annchisom.com</link>
-    <description>AI automation engineer writing about n8n, AI agents, voice AI, workflow automation, and building systems that run while you sleep.</description>
+    <description>AI automation engineer writing about n8n, AI agents, workflow automation, and building systems that run while you sleep.</description>
     <language>en-us</language>
     <atom:link href="https://annchisom.com/rss.xml" rel="self" type="application/rss+xml"/>
     ${items}

@@ -34,7 +34,7 @@ export default function About() {
             </p>
             <p>
               Today, I design and build automation systems that eliminate that friction. From
-              AI agents and voice AI to CRM implementations, workflow automation, RPA, internal
+              AI agents to CRM implementations, workflow automation, RPA, internal
               tools, and operational systems, I help businesses replace repetitive work with
               scalable processes that run reliably behind the scenes.
             </p>

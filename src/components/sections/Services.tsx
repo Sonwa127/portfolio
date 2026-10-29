@@ -5,63 +5,33 @@ import { useState } from "react";
 const services = [
   {
     icon: "⚙️",
-    title: "Workflow & Process Automation",
+    title: "Operations Automation",
     description:
-      "End-to-end automation using n8n, Make, Power Automate, or Zapier. From simple tool integrations to complex multi-step workflows with conditional logic, error handling, and full documentation.",
-  },
-  {
-    icon: "💻",
-    title: "Custom Software Development",
-    description:
-      "Full-stack applications built from scratch with Python, Next.js, and Supabase, not just no-code tools stitched together. Custom CRMs, internal platforms, and data pipelines built to the same standard as a production engineering team.",
+      "For teams buried in repetitive handoffs and disconnected tools. I automate the work end to end with n8n, Make, Power Automate, or Zapier, and connect your CRM (HubSpot, Pipedrive, GoHighLevel, Zoho) so data stays clean and follow-ups happen on their own. Every build ships with clear SOPs your team can follow without me.",
   },
   {
     icon: "🤖",
-    title: "AI Agent Development",
+    title: "AI Agents & Conversational Systems",
     description:
-      "Multi-agent systems, LLM-powered pipelines, and autonomous task execution built on OpenAI, Claude, and LangChain. Designed to operate reliably in production, not just in demos.",
+      "For businesses that need AI that actually does the work, not a chatbot demo. Multi-agent systems and LLM pipelines built on OpenAI, Claude, and LangChain, plus WhatsApp, SMS, and web chat agents that qualify leads, answer questions, and hand off to your team when it matters.",
   },
   {
-    icon: "🎙️",
-    title: "Voice AI Systems",
+    icon: "💻",
+    title: "Custom Internal Systems",
     description:
-      "AI phone agents for inbound and outbound use cases built on Vapi and Twilio. Lead qualification, appointment booking, triage, and customer support running 24/7 without staffing cost.",
+      "For processes that no longer fit off-the-shelf software. Custom CRMs, client portals, internal tools, and dashboards built with Next.js, Supabase, and Python, to a production standard your team can own long term.",
   },
   {
     icon: "🔄",
     title: "RPA & Document Processing",
     description:
-      "UiPath and Power Automate Desktop for robotic process automation. Invoice processing, document extraction, approval workflows, and human-in-the-loop review for regulated industries.",
-  },
-  {
-    icon: "📊",
-    title: "CRM Implementation & Integration",
-    description:
-      "Full CRM setup, customization, migration, and automation across HubSpot, Pipedrive, GoHighLevel, and Zoho. Clean data, connected systems, and workflows that actually reflect how your team works.",
-  },
-  {
-    icon: "💬",
-    title: "Conversational AI & Chatbots",
-    description:
-      "WhatsApp, SMS, and web chat agents built on Botpress, ManyChat, and custom n8n flows. Lead qualification, FAQ handling, RSVP management, and two-way conversations at scale.",
-  },
-  {
-    icon: "🛠️",
-    title: "Internal Tools & Dashboards",
-    description:
-      "Custom internal tools, client portals, and operational dashboards built on Next.js, Retool, Supabase, and Softr. Systems your team can actually use and own long term.",
-  },
-  {
-    icon: "📋",
-    title: "SOPs & Systems Documentation",
-    description:
-      "Clear, structured SOPs and process documentation for automation systems and operational workflows. Every build I deliver comes with documentation your team can follow without needing me present.",
+      "For high document volume and legacy systems. UiPath and Power Automate Desktop for invoice processing, document extraction, and approval workflows, and large-scale OCR pipelines with human-in-the-loop review for regulated industries.",
   },
   {
     icon: "🔗",
-    title: "Embedded Contract & Agency Work",
+    title: "Embedded Automation Engineering",
     description:
-      "Available for embedded roles within agencies and internal teams. Experienced working under NDA, delivering to client specs, and operating as a reliable extension of your delivery team.",
+      "For agencies and internal teams that need delivery capacity. I work as a reliable extension of your team, under NDA, building to your specs and documenting everything for handover.",
   },
 ];
 
@@ -106,7 +76,7 @@ export default function Services() {
           Services
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {services.map((service) => (
             <ServiceCard key={service.title} service={service} />
           ))}
