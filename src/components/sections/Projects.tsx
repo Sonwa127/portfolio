@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { projects, CATEGORIES } from "@/data/projects";
 import ProjectDeck from "@/components/ui/ProjectDeck";
 import type { Category } from "@/data/projects";
@@ -43,6 +44,25 @@ export default function Projects() {
 
         {/* key resets the deck to the first card whenever the filter changes */}
         <ProjectDeck key={active} projects={filtered} />
+
+        {/* Plain list of every case study, so each page has a crawlable link from the homepage */}
+        <nav aria-label="All case studies" className="mt-12 pt-8 border-t border-border">
+          <span className="font-mono-custom text-text-muted text-[11px] tracking-[0.2em] uppercase block mb-4">
+            all case studies
+          </span>
+          <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2.5">
+            {projects.map((p) => (
+              <li key={p.id}>
+                <Link
+                  href={`/projects/${p.id}`}
+                  className="text-sm text-text-secondary hover:text-accent transition-colors"
+                >
+                  {p.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </section>
   );
