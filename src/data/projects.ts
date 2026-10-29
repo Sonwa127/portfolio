@@ -15,6 +15,7 @@ export type Project = {
   stack: string[];
   categories: Category[];
   image?: string;
+  imageAlt?: string;
   liveUrl?: string;
   demoUrl?: string;
   githubUrl?: string;

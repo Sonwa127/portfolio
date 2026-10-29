@@ -85,6 +85,8 @@ function ServiceCard({ service }: { service: (typeof services)[number] }) {
       </p>
       <button
         onClick={() => setExpanded((e) => !e)}
+        aria-expanded={expanded}
+        aria-label={expanded ? `Show less about ${service.title}` : `Read more about ${service.title}`}
         className="font-mono-custom text-[10.5px] text-accent hover:underline mt-2 self-start"
       >
         {expanded ? "Read less" : "Read more →"}

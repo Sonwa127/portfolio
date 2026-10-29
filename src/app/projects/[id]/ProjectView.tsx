@@ -44,6 +44,8 @@ function ExpandableList({
       {hidden > 0 && (
         <button
           onClick={() => setExpanded((e) => !e)}
+          aria-expanded={expanded}
+          aria-label={expanded ? `Show fewer items in ${label}` : `Show ${hidden} more items in ${label}`}
           className="font-mono-custom text-[11px] text-accent hover:underline mt-3"
         >
           {expanded ? "Show less ↑" : `Show ${hidden} more →`}
@@ -86,7 +88,7 @@ export default function ProjectView({ project }: { project: Project }) {
         <div className="relative w-full h-72 md:h-96 rounded-lg overflow-hidden mb-4 bg-card">
           <Image
             src={project.image}
-            alt={project.title}
+            alt={project.imageAlt ?? `${project.title} screenshot`}
             fill
             className="object-cover object-top"
           />

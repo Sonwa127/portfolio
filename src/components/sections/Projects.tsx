@@ -34,6 +34,7 @@ export default function Projects() {
           {CATEGORIES.map((cat) => (
             <button
               key={cat.key}
+              aria-pressed={active === cat.key}
               onClick={() => {
                 setActive(cat.key);
                 setVisibleCount(PAGE_SIZE);
