@@ -10,6 +10,7 @@ export type Project = {
   title: string;
   tagline: string;
   result?: string;
+  status?: string;
   description: string;
   vertical: string;
   client?: string;
@@ -81,6 +82,7 @@ export const projects: Project[] = [
   {
     id: "land-survey-digitization",
     title: "Large-Scale Land Survey Digitization Pipeline",
+    status: "In progress",
     tagline: "A pipeline built to turn ~3 million scanned land survey documents into structured, searchable data",
     result: "Open-source pipeline built to digitize roughly 3 million survey documents",
     description: "A government-adjacent digitization pipeline built to process approximately 3 million land survey documents. The system compresses, OCRs, and parses each document through a fully open-source stack, with preprocessing tuned specifically for real-world scan quality rather than generic OCR benchmarks.",
@@ -385,7 +387,6 @@ export const projects: Project[] = [
     categories: ["dev", "ai"],
     image: "/images/projects/ai-audit-1.png",
     extraImages: ["/images/projects/ai-audit-2.png"],
-    liveUrl: "https://ai-audit-five-gamma.vercel.app",
     stats: ["6 business categories", "30 questions", "Personalized PDF report", "Auto email delivery", "ROI projections included", "Calendly CTA converts readers to calls"],
     problem: "Most businesses know they should be using AI but have no clear picture of where they actually stand or where to start. Generic advice does not account for their specific tools, team size, or processes.",
     solution: "A 30-question diagnostic that assesses AI readiness across 6 business dimensions and generates a fully personalized PDF report with specific recommendations and ROI projections, delivered straight to the inbox.",

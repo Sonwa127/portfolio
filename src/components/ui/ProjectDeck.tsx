@@ -108,6 +108,11 @@ function DeckCard({
             <span className="font-mono-custom text-[10px] text-accent bg-card border border-border-hover rounded px-2 py-0.5">
               {project.vertical}
             </span>
+            {project.status && (
+              <span className="font-mono-custom text-[10px] text-base bg-accent rounded px-2 py-0.5">
+                {project.status}
+              </span>
+            )}
             {project.client && (
               <span className="font-mono-custom text-[10px] text-text-muted">{project.client}</span>
             )}
