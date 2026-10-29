@@ -69,9 +69,16 @@ export default function ProjectView({ project }: { project: Project }) {
         <h1 className="font-display text-3xl md:text-4xl font-bold text-text-primary leading-tight">
           {project.title}
         </h1>
-        <span className="font-mono-custom text-[11px] text-accent bg-card border border-border rounded px-2.5 py-1 whitespace-nowrap shrink-0 mt-1.5">
-          {project.vertical}
-        </span>
+        <div className="flex flex-col items-end gap-1.5 shrink-0 mt-1.5">
+          <span className="font-mono-custom text-[11px] text-accent bg-card border border-border rounded px-2.5 py-1 whitespace-nowrap">
+            {project.vertical}
+          </span>
+          {project.status && (
+            <span className="font-mono-custom text-[11px] text-base bg-accent rounded px-2.5 py-1 whitespace-nowrap">
+              {project.status}
+            </span>
+          )}
+        </div>
       </div>
 
       {project.client && (

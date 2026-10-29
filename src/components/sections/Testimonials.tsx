@@ -3,6 +3,7 @@ const testimonials = [
     quote: "it worked, solid work",
     name: "Francis S.",
     role: "CEO, Intellibot Media",
+    work: "Built: voice-driven content and video creation system, lead scraping and email outreach",
     stars: 5,
   },
   {
@@ -69,6 +70,11 @@ export default function Testimonials() {
                 <p className="font-mono-custom text-[11px] text-text-muted">
                   {t.role}
                 </p>
+                {"work" in t && t.work && (
+                  <p className="font-mono-custom text-[11px] text-text-secondary mt-1.5 leading-relaxed">
+                    {t.work}
+                  </p>
+                )}
               </div>
             </div>
           ))}
