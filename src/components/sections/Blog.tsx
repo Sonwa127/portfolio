@@ -44,29 +44,9 @@ export default function Blog() {
       } catch {}
 
       try {
-        const hnRes = await fetch("https://gql.hashnode.com/", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            query: `{
-              publication(host: "sonwa.hashnode.dev") {
-                posts(first: 6) {
-                  edges {
-                    node {
-                      id title brief url
-                      coverImage { url }
-                      publishedAt
-                      readTimeInMinutes
-                      tags { name }
-                    }
-                  }
-                }
-              }
-            }`,
-          }),
-        });
+        const hnRes = await fetch("/api/hashnode");
         const hnData = await hnRes.json();
-        const edges = hnData?.data?.publication?.posts?.edges || [];
+        const edges = hnData?.edges || [];
         edges.forEach((e: any) => {
           all.push({
             id: `hashnode-${e.node.id}`,
