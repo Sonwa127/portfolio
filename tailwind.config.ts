@@ -19,7 +19,7 @@ const config: Config = {
         "accent-rose": "#C97B8B",
         "text-primary": "#2B2024",
         "text-secondary": "#6B565C",
-        "text-muted": "#8A7378",
+        "text-muted": "#7A6369",
       },
       fontFamily: {
         display: ["var(--font-space-grotesk)", "Space Grotesk", "sans-serif"],

@@ -11,7 +11,7 @@ export default function NotFound() {
         <div className="border-t border-border pt-8 mt-4">
           <p className="font-mono-custom text-[11px] text-text-secondary tracking-widest uppercase mb-4">Looking for something specific?</p>
           <div className="flex items-center justify-center gap-6">
-            <a href="www.linkedin.com/in/ann-chisom-s-172027244" target="_blank" rel="noopener noreferrer" className="font-mono-custom text-[11px] text-text-secondary hover:text-accent transition-colors tracking-widest uppercase">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ann-chisom-s-172027244" target="_blank" rel="noopener noreferrer" className="font-mono-custom text-[11px] text-text-secondary hover:text-accent transition-colors tracking-widest uppercase">LinkedIn</a>
             <span className="text-border">|</span>
             <a href="mailto:annc03700@gmail.com" className="font-mono-custom text-[11px] text-text-secondary hover:text-accent transition-colors tracking-widest uppercase">Email me</a>
             <span className="text-border">|</span>

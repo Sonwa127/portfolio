@@ -90,7 +90,7 @@ export default function RootLayout({
           "Next.js",
         ],
         sameAs: [
-          "https://www.linkedin.com/in/annchisom",
+          "https://www.linkedin.com/in/ann-chisom-s-172027244",
           "https://github.com/Sonwa127",
           "https://dev.to/sonwa",
         ],
