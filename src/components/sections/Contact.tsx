@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
@@ -22,6 +23,12 @@ export default function Contact() {
               <p className="font-display text-sm font-medium text-text-primary mb-4">
                 Get in touch
               </p>
+              <Link
+                href="mailto:ann@sonwailabs.com"
+                className="font-mono-custom text-sm text-accent flex items-center gap-2 hover:underline"
+              >
+                ✉ ann@sonwailabs.com
+              </Link>
               <Link
                 href="mailto:annc03700@gmail.com"
                 className="font-mono-custom text-sm text-accent flex items-center gap-2 hover:underline"
@@ -67,6 +74,17 @@ export default function Contact() {
                 → YouTube
               </Link>
             </div>
+          </div>
+
+          <div className="pt-6 mb-8 border-t border-border">
+            <p className="font-display text-sm font-medium text-text-primary mb-1">
+              Tell me what you want automated
+            </p>
+            <p className="text-text-muted text-sm mb-5">
+              Share the process and the tools involved, and I will come back with whether it is
+              worth automating and how.
+            </p>
+            <ContactForm />
           </div>
 
           <div className="pt-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
