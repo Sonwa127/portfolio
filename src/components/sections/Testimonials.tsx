@@ -3,7 +3,7 @@ const testimonials = [
     quote: "it worked, solid work",
     name: "Francis S.",
     role: "CEO, Intellibot Media",
-    work: "Built: voice-driven content and video creation system, lead scraping and email outreach",
+    work: "On the video content creation system, built the way he wanted (said on a call). Also built: lead scraping and email outreach",
     stars: 5,
   },
   {
