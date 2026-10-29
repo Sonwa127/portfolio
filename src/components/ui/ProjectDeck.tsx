@@ -7,7 +7,6 @@ import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer
 import type { Project } from "@/data/projects";
 
 const VISIBLE = 3; // cards shown in the stack at once
-const MAX_STACK_CHIPS = 8;
 
 type Custom = { pos?: number; dir: number };
 
@@ -34,14 +33,52 @@ const variants: Variants = {
         { opacity: 0, y: 56, scale: 0.84, transition: { duration: 0.3 } },
 };
 
-function DeckCard({ project, interactive }: { project: Project; interactive: boolean }) {
+function Section({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <section className="mb-5">
+      <span className="font-mono-custom text-accent text-[10px] tracking-[0.2em] uppercase block mb-1.5">
+        {label}
+      </span>
+      {children}
+    </section>
+  );
+}
+
+function BulletList({ items, ordered }: { items: string[]; ordered?: boolean }) {
+  const Tag = ordered ? "ol" : "ul";
+  return (
+    <Tag className="space-y-1.5">
+      {items.map((item, i) => (
+        <li key={i} className="flex gap-2.5 text-text-secondary text-[13px] leading-relaxed">
+          <span className="font-mono-custom text-accent text-[11px] shrink-0 mt-0.5">
+            {ordered ? String(i + 1).padStart(2, "0") : "→"}
+          </span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </Tag>
+  );
+}
+
+function DeckCard({
+  project,
+  interactive,
+  onImageClick,
+}: {
+  project: Project;
+  interactive: boolean;
+  onImageClick?: () => void;
+}) {
   const resultLine = project.result ?? project.tagline;
-  const chips = project.stack.slice(0, MAX_STACK_CHIPS);
-  const extra = project.stack.length - chips.length;
+  const tab = interactive ? 0 : -1;
 
   return (
     <div className="h-full w-full bg-surface border border-border rounded-xl overflow-hidden shadow-lg flex flex-col md:grid md:grid-cols-[2fr_3fr]">
-      <div className="relative h-44 md:h-full bg-card shrink-0">
+      {/* Image panel: clicking it flips to the next project */}
+      <div
+        className={`relative h-40 md:h-full bg-card shrink-0 ${onImageClick ? "cursor-pointer" : ""}`}
+        onClick={onImageClick}
+      >
         {project.image ? (
           <Image
             src={project.image}
@@ -57,50 +94,102 @@ function DeckCard({ project, interactive }: { project: Project; interactive: boo
             </span>
           </div>
         )}
+        {onImageClick && (
+          <span className="absolute bottom-3 left-3 font-mono-custom text-[10px] text-white bg-black/55 px-2 py-1 rounded">
+            Click to flip to the next →
+          </span>
+        )}
       </div>
 
-      <div className="p-5 md:p-6 flex flex-col min-h-0 flex-1">
-        <div className="flex flex-wrap items-center gap-2 mb-2">
-          <span className="font-mono-custom text-[10px] text-accent bg-card border border-border-hover rounded px-2 py-0.5">
-            {project.vertical}
-          </span>
-          {project.client && (
-            <span className="font-mono-custom text-[10px] text-text-muted">{project.client}</span>
-          )}
+      <div className="flex flex-col min-h-0 flex-1">
+        {/* Header (stays in view) */}
+        <div className="px-5 md:px-6 pt-5 pb-3 border-b border-border">
+          <div className="flex flex-wrap items-center gap-2 mb-2">
+            <span className="font-mono-custom text-[10px] text-accent bg-card border border-border-hover rounded px-2 py-0.5">
+              {project.vertical}
+            </span>
+            {project.client && (
+              <span className="font-mono-custom text-[10px] text-text-muted">{project.client}</span>
+            )}
+          </div>
+          <h3 className="font-display font-bold text-text-primary text-lg md:text-xl leading-snug mb-1.5">
+            {project.title}
+          </h3>
+          <p className="text-text-primary text-sm font-medium leading-relaxed">{resultLine}</p>
         </div>
 
-        <h3 className="font-display font-bold text-text-primary text-lg md:text-xl leading-snug mb-2">
-          {project.title}
-        </h3>
-        <p className="text-text-primary text-sm font-medium leading-relaxed mb-3">{resultLine}</p>
+        {/* Everything else scrolls */}
+        <div
+          className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-5 md:px-6 py-4"
+          tabIndex={tab}
+          aria-label={`Details for ${project.title}`}
+        >
+          <Section label="overview">
+            <p className="text-text-secondary text-[13px] leading-relaxed">{project.description}</p>
+          </Section>
 
-        <span className="font-mono-custom text-accent text-[10px] tracking-[0.2em] uppercase block mb-1">
-          the problem
-        </span>
-        <p className="text-text-secondary text-[13px] leading-relaxed line-clamp-4 mb-3">
-          {project.problem ?? project.description}
-        </p>
-
-        <div className="flex flex-wrap gap-1.5 mb-3">
-          {chips.map((tool) => (
-            <span
-              key={tool}
-              className="font-mono-custom text-[10px] text-text-secondary border border-border bg-card px-1.5 py-0.5 rounded"
-            >
-              {tool}
-            </span>
-          ))}
-          {extra > 0 && (
-            <span className="font-mono-custom text-[10px] text-text-muted px-1.5 py-0.5">
-              +{extra} more
-            </span>
+          {project.stats && project.stats.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 mb-5">
+              {project.stats.map((stat) => (
+                <span
+                  key={stat}
+                  className="font-mono-custom text-[10px] text-text-secondary bg-card border border-border px-2 py-1 rounded-full"
+                >
+                  {stat}
+                </span>
+              ))}
+            </div>
           )}
+
+          {project.problem && (
+            <Section label="the problem">
+              <p className="text-text-secondary text-[13px] leading-relaxed">{project.problem}</p>
+            </Section>
+          )}
+
+          {project.solution && (
+            <Section label="the approach">
+              <p className="text-text-secondary text-[13px] leading-relaxed">{project.solution}</p>
+            </Section>
+          )}
+
+          {project.howItWorks && project.howItWorks.length > 0 && (
+            <Section label="how it works">
+              <BulletList items={project.howItWorks} ordered />
+            </Section>
+          )}
+
+          {project.results && project.results.length > 0 && (
+            <Section label="the result">
+              <BulletList items={project.results} />
+            </Section>
+          )}
+
+          {project.highlights && project.highlights.length > 0 && (
+            <Section label="technical highlights">
+              <BulletList items={project.highlights} />
+            </Section>
+          )}
+
+          <Section label="stack">
+            <div className="flex flex-wrap gap-1.5">
+              {project.stack.map((tool) => (
+                <span
+                  key={tool}
+                  className="font-mono-custom text-[10px] text-text-secondary border border-border bg-card px-1.5 py-0.5 rounded"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </Section>
         </div>
 
-        <div className="mt-auto pt-3 border-t border-border flex flex-wrap items-center gap-x-4 gap-y-2">
+        {/* Links (stay in view) */}
+        <div className="px-5 md:px-6 py-3 border-t border-border flex flex-wrap items-center gap-x-4 gap-y-2">
           <Link
             href={`/projects/${project.id}`}
-            tabIndex={interactive ? 0 : -1}
+            tabIndex={tab}
             aria-label={`Read the ${project.title} case study`}
             className="px-4 py-2 bg-accent text-base font-display font-semibold text-xs rounded-md hover:bg-accent-hover transition-colors"
           >
@@ -111,7 +200,7 @@ function DeckCard({ project, interactive }: { project: Project; interactive: boo
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              tabIndex={interactive ? 0 : -1}
+              tabIndex={tab}
               aria-label={`Live site: ${project.title}`}
               className="font-mono-custom text-[11px] text-accent hover:underline"
             >
@@ -123,7 +212,7 @@ function DeckCard({ project, interactive }: { project: Project; interactive: boo
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              tabIndex={interactive ? 0 : -1}
+              tabIndex={tab}
               aria-label={`Demo: ${project.title}`}
               className="font-mono-custom text-[11px] text-accent hover:underline"
             >
@@ -135,7 +224,7 @@ function DeckCard({ project, interactive }: { project: Project; interactive: boo
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              tabIndex={interactive ? 0 : -1}
+              tabIndex={tab}
               aria-label={`GitHub repository: ${project.title}`}
               className="font-mono-custom text-[11px] text-text-secondary hover:text-accent transition-colors"
             >
@@ -191,7 +280,7 @@ export default function ProjectDeck({ projects }: { projects: Project[] }) {
       className="outline-offset-8"
     >
       <div
-        className="relative mx-auto max-w-4xl h-[43rem] md:h-[27rem] mb-16 [perspective:1400px]"
+        className="relative mx-auto max-w-4xl h-[46rem] md:h-[32rem] mb-16 [perspective:1400px]"
         style={{ perspective: 1400 }}
       >
         <AnimatePresence initial={false} custom={{ dir }}>
@@ -211,18 +300,12 @@ export default function ProjectDeck({ projects }: { projects: Project[] }) {
                 pos === 0 ? "" : "pointer-events-none"
               }`}
               aria-hidden={pos === 0 ? undefined : true}
-              onClick={
-                pos === 0
-                  ? (e) => {
-                      // Clicking the card itself (not a link or button) shows the next project
-                      if (!(e.target as HTMLElement).closest("a,button")) go(1);
-                    }
-                  : undefined
-              }
             >
-              <div className={pos === 0 && n > 1 ? "h-full cursor-pointer" : "h-full"}>
-                <DeckCard project={project} interactive={pos === 0} />
-              </div>
+              <DeckCard
+                project={project}
+                interactive={pos === 0}
+                onImageClick={pos === 0 && n > 1 ? () => go(1) : undefined}
+              />
             </motion.div>
           ))}
         </AnimatePresence>
@@ -255,7 +338,7 @@ export default function ProjectDeck({ projects }: { projects: Project[] }) {
         </button>
       </div>
       <p className="font-mono-custom text-[10px] text-text-muted text-center mt-3">
-        Click the card, use the buttons, or press the arrow keys to flip to the next project.
+        Click the image, use the buttons, press the arrow keys, or swipe to flip to the next project. Scroll inside a card for the full details.
       </p>
     </div>
   );
