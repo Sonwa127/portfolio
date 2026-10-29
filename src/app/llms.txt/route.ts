@@ -22,6 +22,7 @@ n8n, Make, Zapier, Power Automate, UiPath, OpenAI, Claude API, LangChain, Vapi, 
 
 ## Links
 - [Website](https://annchisom.com): portfolio, services and contact form
+- [n8n and AI automation services (UK)](https://annchisom.com/services/n8n-automation): what I build, results, process and how to hire me
 - [Case studies](https://annchisom.com/#projects): selected automation and AI projects
 - [MedDesk case study](https://annchisom.com/projects/meddesk): healthcare CRM architected for HIPAA-regulated practices
 - [GitHub](https://github.com/Sonwa127): code and demos

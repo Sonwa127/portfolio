@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useState } from "react";
 
 const services = [
@@ -81,6 +83,14 @@ export default function Services() {
             <ServiceCard key={service.title} service={service} />
           ))}
         </div>
+
+        <p className="mt-6 text-sm text-text-secondary">
+          Working with a UK team?{" "}
+          <Link href="/services/n8n-automation" className="text-accent hover:underline">
+            See how I work with n8n and AI automation
+          </Link>
+          .
+        </p>
       </div>
     </section>
   );

@@ -193,6 +193,21 @@ export default function ProjectView({ project }: { project: Project }) {
           ))}
         </div>
       </div>
+
+      <div className="mt-10 bg-surface border border-border rounded-lg p-6">
+        <p className="font-display text-base font-medium text-text-primary mb-1">
+          Need something similar?
+        </p>
+        <p className="text-text-secondary text-sm leading-relaxed mb-3">
+          I build workflow automation, AI agents and internal tools, then hand them over so your team owns them.
+        </p>
+        <Link
+          href="/services/n8n-automation"
+          className="font-mono-custom text-[11px] text-accent hover:underline"
+        >
+          Work with me →
+        </Link>
+      </div>
     </main>
   );
 }
