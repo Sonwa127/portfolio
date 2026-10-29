@@ -1,14 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Link from "next/link";
-
-const phrases = [
-  "eliminate manual work.",
-  "scale without hiring.",
-  "think, route, and act.",
-  "run while you sleep.",
-];
 
 const stats = [
   { value: "40+", label: "Production Systems" },
@@ -107,38 +97,6 @@ function ProcessFlowDesktop() {
 }
 
 export default function Hero() {
-  const [text, setText] = useState("");
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    const phrase = phrases[phraseIndex];
-    const speed = deleting ? 40 : 70;
-
-    const timeout = setTimeout(() => {
-      if (!deleting) {
-        setText(phrase.slice(0, charIndex + 1));
-        if (charIndex + 1 === phrase.length) {
-          setTimeout(() => setDeleting(true), 1800);
-        } else {
-          setCharIndex((c) => c + 1);
-        }
-      } else {
-        setText(phrase.slice(0, charIndex - 1));
-        if (charIndex - 1 === 0) {
-          setDeleting(false);
-          setPhraseIndex((i) => (i + 1) % phrases.length);
-          setCharIndex(0);
-        } else {
-          setCharIndex((c) => c - 1);
-        }
-      }
-    }, speed);
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, deleting, phraseIndex]);
-
   return (
     <section id="top" className="min-h-screen flex items-center pt-16">
       <div className="max-w-6xl mx-auto px-6 py-32">
@@ -155,43 +113,44 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-text-primary leading-[1.1] mb-4">
+            <h1 className="font-display text-5xl md:text-6xl font-bold text-text-primary leading-[1.1] mb-6">
               I automate the manual work slowing your team down.
             </h1>
 
-            <p
-              aria-hidden="true"
-              className="font-display text-xl md:text-2xl font-semibold text-text-primary mb-6 min-h-[2.5rem]"
-            >
-              I build systems that <span className="text-accent">{text}</span>
-              <span className="inline-block w-0.5 h-[0.85em] bg-accent ml-1 align-middle animate-blink" />
-            </p>
-
             <p className="text-text-secondary text-lg max-w-xl leading-relaxed mb-10">
-              If your team is doing it manually, I automate it. Workflow automation,
-              RPA, AI agents, CRM integrations, internal tools, SOPs,
-              and project scoping, built and shipped for clients across the US, UK,
-              EU, Canada, Australia, Singapore and more.
+              Available as an embedded team member or an independent contractor. I build
+              it, document it, and hand it over, so your team owns it.
             </p>
 
             <ProcessFlowMobile />
 
-            <div className="flex gap-4 flex-wrap">
-              <Link
-                href="#projects"
-                className="inline-block px-6 py-3 bg-accent text-base font-display font-semibold text-sm rounded-md hover:bg-accent-hover transition-colors"
-              >
-                View my work
-              </Link>
+            <div className="flex gap-4 items-center flex-wrap mb-8">
               <Link
                 href="https://calendly.com/sonwa/consultation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 border border-border-hover text-text-primary font-display text-sm rounded-md hover:border-accent hover:text-accent transition-colors"
+                className="inline-block px-6 py-3 bg-accent text-base font-display font-semibold text-sm rounded-md hover:bg-accent-hover transition-colors"
               >
-                Book a call
+                Get a 30-minute automation audit
+              </Link>
+              <Link
+                href="#projects"
+                className="font-display text-sm text-text-primary underline underline-offset-4 decoration-border-hover hover:text-accent hover:decoration-accent transition-colors"
+              >
+                See my work
               </Link>
             </div>
+
+            <ul className="font-mono-custom text-[11px] text-text-secondary leading-relaxed space-y-1.5">
+              <li>
+                <span className="text-accent">→</span> AI content engine saves roughly 20+
+                hours of work every week
+              </li>
+              <li>
+                <span className="text-accent">→</span> Event outreach agent: 161 confirmed
+                attendees, up from the usual 50 to 60
+              </li>
+            </ul>
           </div>
 
           <ProcessFlowDesktop />
