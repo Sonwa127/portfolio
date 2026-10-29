@@ -2,22 +2,16 @@
 
 import { useState } from "react";
 import { projects, CATEGORIES } from "@/data/projects";
-import ProjectCard from "@/components/ui/ProjectCard";
+import ProjectDeck from "@/components/ui/ProjectDeck";
 import type { Category } from "@/data/projects";
-
-const PAGE_SIZE = 5;
 
 export default function Projects() {
   const [active, setActive] = useState<Category | "all">("all");
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filtered =
     active === "all"
       ? projects
       : projects.filter((p) => p.categories.includes(active));
-
-  const visible = filtered.slice(0, visibleCount);
-  const hasMore = visibleCount < filtered.length;
 
   return (
     <section id="projects" className="py-24 border-t border-border">
@@ -30,15 +24,12 @@ export default function Projects() {
         </h2>
 
         {/* Filter bar */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-10">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.key}
               aria-pressed={active === cat.key}
-              onClick={() => {
-                setActive(cat.key);
-                setVisibleCount(PAGE_SIZE);
-              }}
+              onClick={() => setActive(cat.key)}
               className={`font-mono-custom text-[11px] tracking-wide px-3.5 py-1.5 rounded border transition-colors ${
                 active === cat.key
                   ? "bg-card border-border-hover text-accent"
@@ -50,27 +41,8 @@ export default function Projects() {
           ))}
         </div>
 
-        <p className="font-mono-custom text-[11px] text-text-muted mb-8">
-          <span className="text-accent">{visible.length}</span> of{" "}
-          <span className="text-accent">{filtered.length}</span> projects
-        </p>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {visible.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-
-        {hasMore && (
-          <div className="mt-10 text-center">
-            <button
-              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-              className="font-mono-custom text-[11px] tracking-wide px-6 py-3 border border-border hover:border-accent hover:text-accent text-text-secondary rounded transition-colors"
-            >
-              Load more ({filtered.length - visibleCount} remaining)
-            </button>
-          </div>
-        )}
+        {/* key resets the deck to the first card whenever the filter changes */}
+        <ProjectDeck key={active} projects={filtered} />
       </div>
     </section>
   );
