@@ -12,7 +12,7 @@ Ann Chisom Sokwueaku is an independent AI automation engineer who builds done-fo
 - Voice AI (Vapi, Twilio)
 - RPA (UiPath, Power Automate)
 - CRM integrations (HubSpot, Pipedrive, GoHighLevel, Zoho)
-- HIPAA-compliant healthcare systems
+- Healthcare systems architected for HIPAA-regulated environments
 - Internal tools and custom dev (Next.js, Supabase)
 
 ## Industries
