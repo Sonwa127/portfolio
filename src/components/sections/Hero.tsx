@@ -155,12 +155,17 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-text-primary leading-[1.1] mb-6">
-              I build systems that
-              <br />
-              <span className="text-accent">{text}</span>
-              <span className="inline-block w-0.5 h-[0.85em] bg-accent ml-1 align-middle animate-blink" />
+            <h1 className="font-display text-5xl md:text-6xl font-bold text-text-primary leading-[1.1] mb-4">
+              I automate the manual work slowing your team down.
             </h1>
+
+            <p
+              aria-hidden="true"
+              className="font-display text-xl md:text-2xl font-semibold text-text-primary mb-6 min-h-[2.5rem]"
+            >
+              I build systems that <span className="text-accent">{text}</span>
+              <span className="inline-block w-0.5 h-[0.85em] bg-accent ml-1 align-middle animate-blink" />
+            </p>
 
             <p className="text-text-secondary text-lg max-w-xl leading-relaxed mb-10">
               If your team is doing it manually, I automate it. Workflow automation,

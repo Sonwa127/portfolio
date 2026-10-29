@@ -40,9 +40,9 @@ export const CATEGORIES: { key: Category | "all"; label: string }[] = [
 export const projects: Project[] = [
   {
     id: "meddesk",
-    title: "MedDesk - HIPAA-Compliant Healthcare CRM",
+    title: "MedDesk - Healthcare CRM Built for HIPAA-Regulated Practices",
     tagline: "A full multi-tenant CRM replacing spreadsheets for independent medical practices",
-    description: "A HIPAA-compliant multi-tenant CRM built for independent medical practices. Covers patient management, real-time financials, KPI dashboards, task tracking, a form builder, AI practice insights, and a tamper-proof audit log -- all in one system.",
+    description: "A multi-tenant CRM architected for HIPAA-regulated environments, built for independent medical practices. Covers patient management, real-time financials, KPI dashboards, task tracking, a form builder, AI practice insights, and a tamper-proof audit log -- all in one system.",
     vertical: "Healthcare SaaS",
     stack: ["Next.js", "Supabase", "Tailwind", "OpenAI", "Vercel"],
     categories: ["dev", "ai", "crm"],
@@ -50,9 +50,9 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Sonwa127/meddesk-crm",
     liveUrl: "https://meddesk-crm.vercel.app/",
     featured: true,
-    stats: ["8 DB tables", "Multi-tenant", "HIPAA-compliant", "AI insights", "Tamper-proof audit log", "Unlimited practices supported"],
+    stats: ["8 DB tables", "Multi-tenant", "Row-level security", "AI insights", "Tamper-proof audit log", "Unlimited practices supported"],
     problem: "Independent medical practices in the $300K to $700K revenue range run their operations on spreadsheets and disconnected tools. No real-time financial visibility, no staff accountability system, patient intake still on paper, and KPIs living in someone's personal Excel file. Practices lose money silently and compliance is an afterthought.",
-    solution: "A full HIPAA-compliant multi-tenant CRM that replaces all of that. One system, every practice, zero spreadsheets. Built on Next.js and Supabase with row-level security enforced at the database level.",
+    solution: "A full multi-tenant CRM, architected for HIPAA-regulated environments, that replaces all of that. One system, every practice, zero spreadsheets. Built on Next.js and Supabase with row-level security enforced at the database level.",
     howItWorks: [
       "Each practice is a separate organization in the database with its own org_id, zero data leakage between clients",
       "Row Level Security is enforced at the Postgres level via Supabase, unauthorized queries are rejected at the database itself",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     ],
     results: [
       "Full production CRM deployed and live",
-      "8 database tables all HIPAA-compliant",
+      "8 database tables with row-level security and database-level audit logging",
       "Multi-tenant architecture supporting unlimited practices",
       "AI insights generating real clinical and financial recommendations",
       "Complete audit trail on all PHI access that cannot be bypassed",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
       "Multi-tenancy built in from day one, retrofitting it later would mean rebuilding the entire schema",
       "Audit logging at database level not application level, application code can be bypassed, database triggers cannot",
       "Row Level Security as the last line of defence, even if every other layer fails, RLS never sleeps",
-      "HIPAA-eligible infrastructure built to the standard that actual healthcare compliance requires",
+      "Technical safeguards (access control, audit logging, tenant isolation) designed to support HIPAA requirements; administrative policies and vendor agreements are set up per deployment",
     ],
   },
   {
