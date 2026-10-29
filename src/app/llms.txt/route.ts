@@ -25,7 +25,7 @@ n8n, Make, Zapier, Power Automate, UiPath, OpenAI, Claude API, LangChain, Vapi, 
 - [Case studies](https://annchisom.com/#projects): selected automation and AI projects
 - [MedDesk case study](https://annchisom.com/projects/meddesk): healthcare CRM architected for HIPAA-regulated practices
 - [GitHub](https://github.com/Sonwa127): code and demos
-- [LinkedIn](https://www.linkedin.com/in/annchisom): professional profile
+- [LinkedIn](https://www.linkedin.com/in/ann-chisom-s-172027244): professional profile
 - [Articles](https://dev.to/sonwa): writing on automation and AI systems
 - [Book a call](https://calendly.com/sonwa/consultation): free 30-minute automation audit`
 
