@@ -7,12 +7,11 @@ import CursorGlow from "@/components/ui/CursorGlow";
 export const metadata: Metadata = {
   title: "Ann Chisom Sokwueaku | AI Automation Engineer",
   description:
-    "I design and build automation systems that eliminate manual work for businesses across the US, UK, EU, Canada, Australia, and Singapore. Workflow automation, RPA, AI agents, voice AI, and CRM integrations.",
+    "I design and build automation systems that eliminate manual work for businesses across the US, UK, EU, Canada, Australia, and Singapore. Workflow automation, RPA, AI agents, and CRM integrations.",
   keywords: [
     "AI automation",
     "n8n",
     "workflow automation",
-    "voice AI",
     "RPA",
     "AI engineer",
     "UiPath",
@@ -70,12 +69,11 @@ export default function RootLayout({
         name: "Ann Chisom Sokwueaku",
         url: "https://annchisom.com",
         jobTitle: "AI Automation Engineer",
-        description: "I build workflow automation, AI agents, voice AI, CRM integrations, RPA systems, and internal tools for SMB clients across the US, UK, EU, Canada, Australia, and Singapore.",
+        description: "I build workflow automation, AI agents, CRM integrations, RPA systems, and internal tools for SMB clients across the US, UK, EU, Canada, Australia, and Singapore.",
         knowsAbout: [
           "AI Automation",
           "Workflow Automation",
           "n8n",
-          "Voice AI",
           "RPA",
           "UiPath",
           "CRM Integration",
@@ -93,7 +91,7 @@ export default function RootLayout({
         ],
         offers: {
           "@type": "Offer",
-          description: "AI automation engineering services including workflow automation, RPA, AI agents, voice AI, and CRM integrations",
+          description: "AI automation engineering services including workflow automation, RPA, AI agents, and CRM integrations",
         },
       }),
     }}
