@@ -1,5 +1,17 @@
 const testimonials = [
   {
+    quote: "it worked, solid work",
+    name: "Francis S.",
+    role: "CEO, Intellibot Media",
+    stars: 5,
+  },
+  {
+    quote: "No comment. She is a genius. Just brilliant work.",
+    name: "Achilles Alpay",
+    role: "Agency Partner",
+    stars: 5,
+  },
+  {
     quote: "Ann came very well prepared for our consultation and put genuine effort into her proposal. She was professional throughout and I appreciated her time and dedication.",
     name: "Verified Client",
     role: "Upwork, 5 stars",
