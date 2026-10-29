@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 
 export async function GET() {
   const content = `# Ann Chisom Sokwueaku
-> AI Automation Engineer and founder of Sonwailabs
+> AI Automation Engineer
 
 Ann Chisom Sokwueaku is an independent AI automation engineer who builds done-for-you workflow automation, AI agents, voice AI, CRM integrations, RPA systems, and internal tools for SMB clients across the US, UK, EU, Canada, Australia, and Singapore.
 
