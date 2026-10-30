@@ -31,7 +31,7 @@ export default function Navbar() {
           href="#top"
           className="font-mono-custom text-accent text-sm tracking-widest hover:opacity-80 transition-opacity"
         >
-          Ann Chisom Sokwueaku
+          Ann Chisom Sokwue
         </Link>
 
         <ul className="flex gap-8">

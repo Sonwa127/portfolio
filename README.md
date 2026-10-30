@@ -1,4 +1,4 @@
-# Ann Chisom Sokwueaku , Portfolio
+# Ann Chisom Sokwue , Portfolio
 
 Personal portfolio site built with Next.js 14, Tailwind CSS, and Framer Motion.
 
