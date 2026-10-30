@@ -70,6 +70,14 @@ const content: ServiceContent = {
       text: "I rebuild your existing automations in n8n, test them side by side with the old ones, and switch over once they match.",
     },
     {
+      title: "Debugging broken workflows",
+      text: "A workflow that fails, stops halfway or gives wrong results. I find the cause, fix it and add alerts so the next failure does not go unnoticed. Works for n8n, Make and Zapier.",
+    },
+    {
+      title: "Clean-up and speed-ups",
+      text: "Workflows that have grown messy, slow or expensive to run. I clean up the steps, remove what is duplicated, make it faster and document it so your team can follow it.",
+    },
+    {
       title: "Custom internal tools",
       text: "Small dashboards and back-office apps on Next.js and Supabase, for the jobs a spreadsheet and a few automations cannot handle.",
     },
@@ -115,21 +123,76 @@ const content: ServiceContent = {
     { title: "Document", text: "Every workflow comes with clear notes so anyone on your team can follow it." },
     { title: "Hand over", text: "Your team owns it. I stay on for support or further work if you want me to." },
   ],
+  sections: [
+    {
+      id: "timeline",
+      label: "timeline",
+      heading: "How long does the first workflow take?",
+      paragraphs: [
+        "Your first workflow is usually live in about 2 weeks, and often sooner. How long it takes depends on how complicated your current process is, how many tools it touches and how tidy the data behind it is.",
+        "A simple workflow can be faster. A messy process or a lot of old data can take longer. I will tell you that after the first call, with a date, before you commit to anything.",
+      ],
+    },
+    {
+      id: "comparison",
+      label: "n8n, make or zapier",
+      heading: "n8n or Zapier or Make: which one is right for you?",
+      paragraphs: [
+        "I build in all three, and I recommend the one that fits your problem, not the one I like best.",
+      ],
+      bullets: [
+        "Zapier is the quickest to start with and easy for non-technical teams, but it charges per task, so the cost climbs as your volume grows.",
+        "Make is visual and good value for medium-complexity workflows with branching and data handling.",
+        "n8n is the most flexible. It handles complex logic, AI agents and high volumes well, and you can host it yourself or use n8n Cloud.",
+      ],
+    },
+    {
+      id: "failures",
+      label: "reliability",
+      heading: "How I catch failures",
+      paragraphs: [
+        "Every workflow I build has error handling. When a step fails, it does not fail quietly. You get an alert, and the failure is logged so it can be fixed and run again, so nothing gets lost without you knowing.",
+      ],
+    },
+    {
+      id: "data",
+      label: "your data",
+      heading: "What happens to my data?",
+      paragraphs: [
+        "Your data stays where it already lives, in your own systems. I build inside your accounts and work with the records you already hold. I do not use your data for anything other than the workflow you asked for, and you stay in control of the accounts when I hand over.",
+        "If your business has rules about where data can go, tell me on the first call and I will build around them.",
+      ],
+    },
+  ],
   pricingHeading: "How much does it cost to hire an n8n developer?",
   pricingIntro:
-    "It depends on the scope, so I quote each project after the first call instead of guessing. What moves the price most:",
+    "Prices are in pounds and these are starting points. Every project is different, so request a quote. After the first call I send a fixed quote, so you know the full cost before I start.",
   pricingFactors: [
-    "How many tools and systems the workflow connects.",
-    "Whether AI steps are involved, such as classifying, drafting or extracting.",
-    "How messy the data is and how many edge cases the process has.",
-    "Whether you want a one-off build or ongoing support after handover.",
+    "First workflow: £599 to £2,500, depending on how complex it is.",
+    "Multi-workflow builds and AI agents: from £3,000.",
+    "Custom software: from £3,000.",
+    "Fixing or cleaning up an existing workflow: request a quote after a quick look.",
+    "Ongoing monitoring and support: £99 a month.",
+    "The first 30-minute audit call is free.",
   ],
   pricingClose:
-    "Tell me what you want automated and I will come back with a clear price and a plan.",
+    "What moves the price most is how many tools the workflow connects, whether it uses AI steps, how messy the data is, and whether you want support after handover. Tell me what you want automated and request a quote.",
   faqs: [
     {
       q: "How do I hire an n8n developer?",
       a: "Book a 30-minute call or send the form below. Tell me what is slowing your team down. I will reply within one business day, agree the scope with you, send a quote and start building in your accounts.",
+    },
+    {
+      q: "How long does it take to build the first n8n workflow?",
+      a: "About 2 weeks, and often sooner. It depends on how complicated your current process is, how many tools it touches and how tidy your data is. I give you a date after the first call.",
+    },
+    {
+      q: "What happens to my data?",
+      a: "Your data stays in your own systems. I build inside your accounts, use only what the workflow needs, and you stay in control of the accounts at handover.",
+    },
+    {
+      q: "Can you fix or take over a workflow someone else built?",
+      a: "Yes. I look at what is there, find why it fails or runs slowly, and fix it. If it is badly built I will tell you whether it is better to repair it or rebuild it. Either way I document it, so your team can follow it afterwards.",
     },
     {
       q: "Do you work with UK businesses?",
@@ -170,7 +233,7 @@ const content: ServiceContent = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "n8n developer and AI automation engineering",
-    serviceType: "n8n workflow automation, AI agents and internal tools",
+    serviceType: "n8n workflow automation, debugging, AI agents and internal tools",
     url: URL,
     description,
     provider: {

@@ -8,7 +8,10 @@ type Proof = { stat: string; text: string; href?: string; cta?: string };
 type Step = { title: string; text: string };
 type Faq = { q: string; a: string };
 
+type Extra = { id: string; label: string; heading: string; paragraphs: string[]; bullets?: string[] };
+
 export type ServiceContent = {
+  sections?: Extra[];
   eyebrow: string;
   h1: string;
   intro: string[];
@@ -169,6 +172,26 @@ export default function ServiceLayout({ c }: { c: ServiceContent }) {
           ))}
         </ol>
       </section>
+
+      {(c.sections ?? []).map((x) => (
+        <section key={x.id} className="mb-16" aria-labelledby={x.id}>
+          <span className={label}>{x.label}</span>
+          <h2 id={x.id} className={h2}>{x.heading}</h2>
+          {x.paragraphs.map((para) => (
+            <p key={para} className="text-text-secondary leading-relaxed mb-4">{para}</p>
+          ))}
+          {x.bullets && (
+            <ul className="space-y-2">
+              {x.bullets.map((b) => (
+                <li key={b} className="flex gap-3 text-text-secondary leading-relaxed">
+                  <span className="text-accent mt-1.5 text-xs">●</span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
 
       <section className="mb-16" aria-labelledby="pricing">
         <span className={label}>pricing</span>
