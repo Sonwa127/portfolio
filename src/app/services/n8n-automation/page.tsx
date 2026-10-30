@@ -158,15 +158,16 @@ const content: ServiceContent = {
   ],
   pricingHeading: "How much does it cost to hire an n8n developer?",
   pricingIntro:
-    "Prices are in pounds and these are starting points. After the first call I send a fixed quote, so you know the full cost before I start.",
+    "Prices are in pounds and these are starting points. Every project is different, so request a quote. After the first call I send a fixed quote, so you know the full cost before I start.",
   pricingFactors: [
-    "First workflow: from £900, typically £900 to £2,500 depending on how complex it is.",
+    "First workflow: £599 to £2,500, depending on how complex it is.",
     "Multi-workflow builds and AI agents: from £3,000.",
-    "Ongoing monitoring and support: from £99 a month.",
+    "Custom software: from £3,000.",
+    "Ongoing monitoring and support: £99 a month.",
     "The first 30-minute audit call is free.",
   ],
   pricingClose:
-    "What moves the price most is how many tools the workflow connects, whether it uses AI steps, how messy the data is, and whether you want support after handover.",
+    "What moves the price most is how many tools the workflow connects, whether it uses AI steps, how messy the data is, and whether you want support after handover. Tell me what you want automated and request a quote.",
   faqs: [
     {
       q: "How do I hire an n8n developer?",
