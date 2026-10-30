@@ -70,6 +70,14 @@ const content: ServiceContent = {
       text: "I rebuild your existing automations in n8n, test them side by side with the old ones, and switch over once they match.",
     },
     {
+      title: "Debugging broken workflows",
+      text: "A workflow that fails, stops halfway or gives wrong results. I find the cause, fix it and add alerts so the next failure does not go unnoticed. Works for n8n, Make and Zapier.",
+    },
+    {
+      title: "Clean-up and speed-ups",
+      text: "Workflows that have grown messy, slow or expensive to run. I clean up the steps, remove what is duplicated, make it faster and document it so your team can follow it.",
+    },
+    {
       title: "Custom internal tools",
       text: "Small dashboards and back-office apps on Next.js and Supabase, for the jobs a spreadsheet and a few automations cannot handle.",
     },
@@ -163,6 +171,7 @@ const content: ServiceContent = {
     "First workflow: £599 to £2,500, depending on how complex it is.",
     "Multi-workflow builds and AI agents: from £3,000.",
     "Custom software: from £3,000.",
+    "Fixing or cleaning up an existing workflow: request a quote after a quick look.",
     "Ongoing monitoring and support: £99 a month.",
     "The first 30-minute audit call is free.",
   ],
@@ -180,6 +189,10 @@ const content: ServiceContent = {
     {
       q: "What happens to my data?",
       a: "Your data stays in your own systems. I build inside your accounts, use only what the workflow needs, and you stay in control of the accounts at handover.",
+    },
+    {
+      q: "Can you fix or take over a workflow someone else built?",
+      a: "Yes. I look at what is there, find why it fails or runs slowly, and fix it. If it is badly built I will tell you whether it is better to repair it or rebuild it. Either way I document it, so your team can follow it afterwards.",
     },
     {
       q: "Do you work with UK businesses?",
@@ -220,7 +233,7 @@ const content: ServiceContent = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: "n8n developer and AI automation engineering",
-    serviceType: "n8n workflow automation, AI agents and internal tools",
+    serviceType: "n8n workflow automation, debugging, AI agents and internal tools",
     url: URL,
     description,
     provider: {
