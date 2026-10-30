@@ -63,10 +63,6 @@ export default function About() {
                 services, recruitment, real estate, hospitality, healthcare and sales.
               </p>
               <p>
-                Outside client work, I'm finishing a BSc in Software Engineering and
-                learning machine learning and robotics, so I keep building my own stack.
-              </p>
-              <p>
                 Everything I build is documented, tested and handed over with clear SOPs, so
                 your team can own it and run it without me.
               </p>
