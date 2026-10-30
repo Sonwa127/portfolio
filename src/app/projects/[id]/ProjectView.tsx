@@ -202,7 +202,11 @@ export default function ProjectView({ project }: { project: Project }) {
           I build workflow automation, AI agents and internal tools, then hand them over so your team owns them.
         </p>
         <Link
-          href="/services/n8n-automation"
+          href={
+            project.id === "land-survey-digitization"
+              ? "/services/document-digitization"
+              : "/services/n8n-automation"
+          }
           className="font-mono-custom text-[11px] text-accent hover:underline"
         >
           Work with me →

@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
+    {
+      url: 'https://annchisom.com/services/document-digitization',
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
     ...projectUrls,
   ]
 }

@@ -87,7 +87,11 @@ export default function Services() {
         <p className="mt-6 text-sm text-text-secondary">
           Working with a UK team?{" "}
           <Link href="/services/n8n-automation" className="text-accent hover:underline">
-            See how I work with n8n and AI automation
+            Hire an n8n developer for your team
+          </Link>
+          .{" "}Need scanned records made searchable?{" "}
+          <Link href="/services/document-digitization" className="text-accent hover:underline">
+            See my document digitization service
           </Link>
           .
         </p>
