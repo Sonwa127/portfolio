@@ -6,7 +6,7 @@ export const runtime = 'edge'
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
 
-  const title = searchParams.get('title') || 'Ann Chisom Sokwueaku'
+  const title = searchParams.get('title') || 'Ann Chisom Sokwue'
   const subtitle = searchParams.get('subtitle') || 'AI Automation Engineer'
   const description =
     searchParams.get('description') ||

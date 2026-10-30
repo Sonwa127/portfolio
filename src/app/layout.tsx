@@ -10,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", 
 const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"], display: "swap", variable: "--font-space-mono" });
 
 export const metadata: Metadata = {
-  title: "Ann Chisom Sokwueaku | AI Automation Engineer",
+  title: "Ann Chisom Sokwue | AI Automation Engineer",
   description:
     "I design and build automation systems that eliminate manual work for businesses across the US, UK, EU, Canada, Australia, and Singapore. Workflow automation, RPA, AI agents, and CRM integrations.",
   keywords: [
@@ -25,17 +25,17 @@ export const metadata: Metadata = {
     "CRM automation",
   ],
   openGraph: {
-    title: "Ann Chisom Sokwueaku | AI Automation Engineer",
+    title: "Ann Chisom Sokwue | AI Automation Engineer",
     description:
       "I build automation systems that eliminate manual work, scale without hiring, and run while you sleep.",
     url: "https://annchisom.com",
-    siteName: "Ann Chisom Sokwueaku",
+    siteName: "Ann Chisom Sokwue",
     images: [
       {
         url: "https://annchisom.com/api/og",
         width: 1200,
         height: 630,
-        alt: "Ann Chisom Sokwueaku - AI Automation Engineer",
+        alt: "Ann Chisom Sokwue - AI Automation Engineer",
       },
     ],
     type: "website",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 },
   twitter: {
     card: "summary_large_image",
-    title: "Ann Chisom Sokwueaku | AI Automation Engineer",
+    title: "Ann Chisom Sokwue | AI Automation Engineer",
     description:
       "I build automation systems that eliminate manual work, scale without hiring, and run while you sleep.",
     images: ["https://annchisom.com/api/og"],
@@ -71,7 +71,7 @@ export default function RootLayout({
       __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Person",
-        name: "Ann Chisom Sokwueaku",
+        name: "Ann Chisom Sokwue",
         url: "https://annchisom.com",
         jobTitle: "AI Automation Engineer",
         description: "I build workflow automation, AI agents, CRM integrations, RPA systems, and internal tools for SMB clients across the US, UK, EU, Canada, Australia, and Singapore.",

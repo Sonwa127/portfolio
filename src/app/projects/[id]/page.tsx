@@ -26,7 +26,7 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
       title,
       description,
       url,
-      siteName: "Ann Chisom Sokwueaku",
+      siteName: "Ann Chisom Sokwue",
       type: "article",
       images: [{ url: image, alt: project.title }],
     },

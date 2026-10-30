@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     title,
     description,
     url: URL,
-    siteName: "Ann Chisom Sokwueaku",
+    siteName: "Ann Chisom Sokwue",
     type: "website",
-    images: [{ url: `${SITE}/api/og`, alt: "Ann Chisom Sokwueaku, document digitization" }],
+    images: [{ url: `${SITE}/api/og`, alt: "Ann Chisom Sokwue, document digitization" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -171,7 +171,7 @@ const content: ServiceContent = {
     description,
     provider: {
       "@type": "Person",
-      name: "Ann Chisom Sokwueaku",
+      name: "Ann Chisom Sokwue",
       url: SITE,
       jobTitle: "AI Automation Engineer",
     },

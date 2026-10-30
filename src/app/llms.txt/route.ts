@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server"
 
 export async function GET() {
-  const content = `# Ann Chisom Sokwueaku
+  const content = `# Ann Chisom Sokwue
 > AI Automation Engineer
 
-Ann Chisom Sokwueaku is an independent AI automation engineer who builds done-for-you workflow automation, AI agents, CRM integrations, RPA systems, and internal tools for SMB clients across the US, UK, EU, Canada, Australia, and Singapore.
+Ann Chisom Sokwue is an independent AI automation engineer who builds done-for-you workflow automation, AI agents, CRM integrations, RPA systems, and internal tools for SMB clients across the US, UK, EU, Canada, Australia, and Singapore.
 
 ## Services
 - Workflow automation (n8n, Make, Zapier, Power Automate)
