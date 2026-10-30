@@ -27,13 +27,13 @@ export default function Contact() {
                 href="mailto:ann@sonwailabs.com"
                 className="font-mono-custom text-sm text-accent flex items-center gap-2 hover:underline"
               >
-                ✉ ann@sonwailabs.com
+                ann@sonwailabs.com
               </Link>
               <Link
                 href="mailto:annc03700@gmail.com"
                 className="font-mono-custom text-sm text-accent flex items-center gap-2 hover:underline"
               >
-                ✉ annc03700@gmail.com
+                annc03700@gmail.com
               </Link>
               <Link
                 href="https://www.linkedin.com/in/ann-chisom-s-172027244"
