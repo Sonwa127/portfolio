@@ -1,9 +1,15 @@
+"use client";
+
+import { useState } from "react";
+
 const stack = [
   "n8n", "Make", "UiPath", "Power Automate", "OpenAI", "Claude API",
   "LangChain", "Supabase", "Next.js", "Python", "Twilio", "HubSpot",
 ];
 
 export default function About() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section id="about" className="py-24 border-t border-border">
       <div className="max-w-5xl mx-auto px-6">
@@ -15,32 +21,66 @@ export default function About() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-4 text-text-secondary leading-relaxed">
-            <p>
-              I'm Ann, an AI automation engineer. Every business has processes, and the
-              repeated ones quietly eat the time people should spend on real work.
-            </p>
-            <p>
-              I find those tasks and automate the ones that should be automated. If
-              something should not be, I will tell you and leave it alone.
-            </p>
-            <p>
-              I choose tools based on your problem, whether open source, closed source or
-              paid, and build across the ones you already use. That includes internal
-              workflows for your team and external ones for your clients, and agents for
-              marketing and digital agencies.
-            </p>
-            <p>
-              My clients are across the US, EMEA, LATAM, Australia and Singapore, in field
-              services, recruitment, real estate, hospitality, healthcare and sales. Before
-              this I worked as a virtual assistant and project manager, so I know the work
-              from the inside.
-            </p>
-            <p>
-              I'm also finishing a BSc in Software Engineering and learning machine learning
-              and robotics. Everything I build is documented and handed over with SOPs, so
-              your team can own it.
-            </p>
+          <div className="text-text-secondary leading-relaxed">
+            <div className="space-y-4">
+              <p>
+                I'm Ann, an AI automation engineer. Every business runs on processes, and
+                most of the time those processes eat into the time people should be spending
+                on real work.
+              </p>
+              <p>
+                I look at how your business actually runs and find the tasks that are
+                repeated over and over and waste a lot of time. If a task should be
+                automated, I automate it. If it should not be, I will tell you and leave it
+                alone. Not everything needs automating.
+              </p>
+            </div>
+
+            <div id="about-more" className={`space-y-4 mt-4 ${expanded ? "" : "hidden"}`}>
+              <p>
+                I spent years inside businesses as a virtual assistant and project manager
+                before moving into automation, so I know what that repeated work feels like
+                from the inside.
+              </p>
+              <p>
+                I work across a wide range of tools, and I choose them based on your
+                problem, not on what I happen to like. Open source, closed source or paid, I
+                recommend what fits your team and your budget.
+              </p>
+              <p>
+                I build internal workflows for your own team and external workflows for your
+                clients. I have also built agents for agencies, including marketing and
+                digital agencies, that run parts of their client work.
+              </p>
+              <p>
+                Day to day, that means looking at your operations and taking the chaos out
+                of them: leads that slip through, data copied between systems, reports built
+                by hand, documents processed one at a time. I build it across the tools you
+                already use, so it runs without anyone having to watch it.
+              </p>
+              <p>
+                My clients are across the US, EMEA, LATAM, Australia and Singapore, in field
+                services, recruitment, real estate, hospitality, healthcare and sales.
+              </p>
+              <p>
+                Outside client work, I'm finishing a BSc in Software Engineering and
+                learning machine learning and robotics, so I keep building my own stack.
+              </p>
+              <p>
+                Everything I build is documented, tested and handed over with clear SOPs, so
+                your team can own it and run it without me.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setExpanded((e) => !e)}
+              aria-expanded={expanded}
+              aria-controls="about-more"
+              className="font-mono-custom text-[11px] text-accent hover:underline mt-4"
+            >
+              {expanded ? "See less" : "See more →"}
+            </button>
           </div>
 
           <div>
