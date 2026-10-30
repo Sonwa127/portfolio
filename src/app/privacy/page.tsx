@@ -4,7 +4,7 @@ import Link from "next/link";
 const URL = "https://annchisom.com/privacy";
 
 export const metadata: Metadata = {
-  title: "Privacy Notice | Ann Chisom Sokwueaku",
+  title: "Privacy Notice | Ann Chisom Sokwue",
   description:
     "What personal information annchisom.com collects through its contact form, how it is used, who can see it and how to ask for it to be deleted.",
   alternates: { canonical: URL },
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
       </h1>
       <p className={p}>Last updated: 30 October 2026.</p>
       <p className={p}>
-        This site is run by Ann Chisom Sokwueaku, an AI automation engineer based in Nigeria. This
+        This site is run by Ann Chisom Sokwue, an AI automation engineer based in Nigeria. This
         page explains what personal information the site collects and what happens to it.
       </p>
 
