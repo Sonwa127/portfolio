@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
+    {
+      url: 'https://annchisom.com/privacy',
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.2,
+    },
     ...projectUrls,
   ]
 }

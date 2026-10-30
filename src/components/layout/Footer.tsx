@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border py-8">
@@ -14,6 +16,12 @@ export default function Footer() {
         <p className="font-mono-custom text-[11px] text-text-muted tracking-widest">
           ai automation engineer &nbsp;·&nbsp; {new Date().getFullYear()}
         </p>
+        <Link
+          href="/privacy"
+          className="font-mono-custom text-[11px] text-text-muted hover:text-accent transition-colors"
+        >
+          Privacy
+        </Link>
       </div>
     </footer>
   );
