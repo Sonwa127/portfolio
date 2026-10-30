@@ -8,6 +8,8 @@ export type Category =
 export type Project = {
   id: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   tagline: string;
   result?: string;
   status?: string;
@@ -82,6 +84,8 @@ export const projects: Project[] = [
   {
     id: "land-survey-digitization",
     title: "Large-Scale Land Survey Digitization Pipeline",
+    seoTitle: "Land Survey Digitization: OCR Pipeline for ~3M Documents",
+    seoDescription: "How an open-source OCR pipeline was built to digitize about 3 million scanned land survey documents, using hybrid GPU and CPU OCR.",
     status: "In progress",
     tagline: "A pipeline built to turn ~3 million scanned land survey documents into structured, searchable data",
     result: "Open-source pipeline built to digitize roughly 3 million survey documents",

@@ -13,8 +13,8 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
   const project = projects.find((p) => p.id === params.id);
   if (!project) return {};
 
-  const title = `${project.title} | Case Study`;
-  const description = project.tagline || project.description;
+  const title = project.seoTitle ?? `${project.title} | Case Study`;
+  const description = project.seoDescription ?? (project.tagline || project.description);
   const url = `${SITE}/projects/${project.id}`;
   const image = project.image ? `${SITE}${project.image}` : `${SITE}/api/og`;
 
