@@ -45,23 +45,26 @@ export default function Projects() {
         {/* key resets the deck to the first card whenever the filter changes */}
         <ProjectDeck key={active} projects={filtered} />
 
-        {/* Plain list of every case study, so each page has a crawlable link from the homepage */}
-        <nav aria-label="All case studies" className="mt-12 pt-8 border-t border-border">
-          <span className="font-mono-custom text-text-muted text-[11px] tracking-[0.2em] uppercase block mb-4">
-            all case studies
-          </span>
-          <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2.5">
-            {projects.map((p) => (
-              <li key={p.id}>
-                <Link
-                  href={`/projects/${p.id}`}
-                  className="text-sm text-text-secondary hover:text-accent transition-colors"
-                >
-                  {p.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* Every case study link, collapsed by default. A native <details> keeps the links in the page HTML, so they stay crawlable. */}
+        <nav aria-label="All case studies" className="mt-10 pt-6 border-t border-border">
+          <details className="group">
+            <summary className="cursor-pointer list-none font-mono-custom text-[12px] text-accent hover:underline inline-flex items-center gap-2">
+              View all case studies
+              <span aria-hidden="true" className="transition-transform group-open:rotate-90">→</span>
+            </summary>
+            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-2.5 mt-5">
+              {projects.map((p) => (
+                <li key={p.id}>
+                  <Link
+                    href={`/projects/${p.id}`}
+                    className="text-sm text-text-secondary hover:text-accent transition-colors"
+                  >
+                    {p.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </details>
         </nav>
       </div>
     </section>
