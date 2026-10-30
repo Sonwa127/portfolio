@@ -123,6 +123,13 @@ export default function ContactForm() {
       >
         {status === "sending" ? "Sending..." : "Send message"}
       </button>
+      <p className="text-xs text-text-muted leading-relaxed">
+        I use your details only to reply to you.{" "}
+        <Link href="/privacy" className="text-accent hover:underline">
+          Read the privacy notice
+        </Link>
+        .
+      </p>
     </form>
   );
 }
