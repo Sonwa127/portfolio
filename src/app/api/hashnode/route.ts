@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export const revalidate = 3600;
 
 const QUERY = `{
-  publication(host: "sonwa.hashnode.dev") {
+  publication(host: "sonwablog.hashnode.dev") {
     posts(first: 6) {
       edges {
         node {
