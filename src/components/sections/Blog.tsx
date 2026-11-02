@@ -62,8 +62,14 @@ export default function Blog() {
         });
       } catch {}
 
-      all.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
-      setArticles(all);
+      // The same article can be on both Dev.to and Hashnode. Show one card and
+      // prefer the Hashnode copy, which is the original.
+      const norm = (t: string) => t.trim().toLowerCase();
+      const hashnodeTitles = new Set(all.filter((a) => a.source === "hashnode").map((a) => norm(a.title)));
+      const unique = all.filter((a) => a.source === "hashnode" || !hashnodeTitles.has(norm(a.title)));
+
+      unique.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
+      setArticles(unique);
       setLoading(false);
     };
 
