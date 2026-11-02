@@ -225,6 +225,10 @@ const content: ServiceContent = {
   ],
   contactHeading: "Tell me what you want automated",
   related: [
+    {
+      href: "https://sonwablog.hashnode.dev/n8n-vs-make-vs-zapier-for-uk-businesses-the-differences-and-which-to-choose",
+      label: "Article: n8n vs Make vs Zapier for UK businesses, the differences and which to choose",
+    },
     { href: "/services/document-digitization", label: "Document digitization with OCR for land records and archives" },
     { href: "/projects/ai-sms-sales", label: "Case study: AI sales agent, 40+ deals in 49 days" },
     { href: "/projects/bellandaine", label: "Case study: 90-node field services workflow" },
