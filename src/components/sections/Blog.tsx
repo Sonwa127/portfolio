@@ -160,7 +160,7 @@ export default function Blog() {
           <Link href="https://dev.to/sonwa" target="_blank" rel="noopener noreferrer" className="font-mono-custom text-[11px] text-accent hover:underline">
             View all on Dev.to
           </Link>
-          <Link href="https://sonwa.hashnode.dev" target="_blank" rel="noopener noreferrer" className="font-mono-custom text-[11px] text-accent hover:underline">
+          <Link href="https://hashnode.com/@sonwa127" target="_blank" rel="noopener noreferrer" className="font-mono-custom text-[11px] text-accent hover:underline">
             View all on Hashnode
           </Link>
         </div>
