@@ -15,6 +15,7 @@ export type ServiceContent = {
   eyebrow: string;
   h1: string;
   intro: string[];
+  updated?: string;
   ctaLabel: string;
   problemsLabel: string;
   problemsHeading: string;
@@ -80,6 +81,11 @@ export default function ServiceLayout({ c }: { c: ServiceContent }) {
           {p}
         </p>
       ))}
+      {c.updated && (
+        <p className="font-mono-custom text-[11px] text-text-secondary mt-2">
+          Last updated: {c.updated}
+        </p>
+      )}
       <div className="flex flex-wrap items-center gap-4 mt-6 mb-16">
         <Link
           href={CALENDLY}

@@ -35,6 +35,7 @@ const content: ServiceContent = {
     "I am Ann Chisom, an AI automation engineer. I build n8n workflows, AI agents and internal tools for teams that are tired of doing the same work by hand, then hand everything over with clear documentation so your team owns it.",
     "Most of my work is for teams in the UK, US and Australia. I work from Nigeria on UTC+1, so we share most of the UK working day.",
   ],
+  updated: "6 November 2026",
   ctaLabel: "Book a 30-minute automation audit",
   problemsLabel: "the problem",
   problemsHeading: "Signs it is time to hire an n8n developer",
@@ -197,6 +198,10 @@ const content: ServiceContent = {
     {
       q: "Do you work with UK businesses?",
       a: "Yes. I work with teams in the UK, US, Australia and Nigeria. I am based in Nigeria, on UTC+1, so my working day overlaps with UK hours.",
+    },
+    {
+      q: "Do you offer n8n consulting?",
+      a: "Yes. The first 30-minute call is a free audit where we look at what is slowing your team down and which processes are worth automating first. I can also review workflows you already have in n8n, Make or Zapier and tell you what to fix, then build or repair them if you want me to.",
     },
     {
       q: "Can you work inside our team?",
