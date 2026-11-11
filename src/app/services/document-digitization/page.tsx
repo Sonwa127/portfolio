@@ -35,6 +35,7 @@ const content: ServiceContent = {
     "If your records exist only as scans and paper, nobody can search them. I build digitization pipelines that turn scanned documents into structured, searchable data: each page is cleaned, read by the right OCR engine, and written into a database you control.",
     "I am Ann Chisom, an AI automation engineer. This is the work behind a pipeline built for roughly 3 million land survey documents, currently in progress for a client under NDA.",
   ],
+  updated: "6 November 2026",
   ctaLabel: "Book a 30-minute call about your archive",
   problemsLabel: "the problem",
   problemsHeading: "When scanned records become a problem",
@@ -79,7 +80,7 @@ const content: ServiceContent = {
   audience: [
     "Land registries, lands ministries and county or municipal records offices.",
     "Surveying, mapping and GIS firms with archives of survey plans and field records.",
-    "Title, property and real estate companies, and the law firms that work with them.",
+    "Title, property and real estate companies, and the law firms that work with them, including teams with title deeds and property deeds to digitize.",
     "Banks and lenders holding scanned property and collateral files.",
     "Utilities, oil and gas and engineering firms with legacy drawings and paper records.",
     "Scanning and records management companies that need an OCR back end.",
@@ -131,6 +132,14 @@ const content: ServiceContent = {
     {
       q: "What is land records digitization?",
       a: "It is the digitization of land and property records such as survey documents, deeds, title documents and maps, so they can be searched by field instead of found by hand. My own work so far is on land survey documents.",
+    },
+    {
+      q: "Can you extract data from title deeds and property deeds with OCR?",
+      a: "Yes, in the same way I handle land survey documents: clean the scans, read each page with OCR, and store fields such as parties, plot references and dates in a database you can search. My own work so far is on land survey documents, not a separate title deed project, so I test on a sample of your deeds first and show you the results before running the full archive.",
+    },
+    {
+      q: "Which OCR platform captures structured data from property deeds?",
+      a: "It depends on your scans, so there is no single best platform. For the land survey pipeline I compared four engines: Azure Document Intelligence, PaddleOCR-VL, olmOCR and DeepSeek-OCR. The current setup uses PaddleOCR-VL and Qwen2-VL for hard pages and a fine-tuned Tesseract for standard text. For your documents I would run the same kind of comparison on a sample before choosing.",
     },
     {
       q: "Can you read handwritten annotations?",
